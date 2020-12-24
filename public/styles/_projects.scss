@@ -1,0 +1,107 @@
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: var(--primaryColor);
+}
+
+.projects-container {
+  width: 90%;
+  display: grid;
+  padding: var(--gutter) 0;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: repeat(4, auto);
+  align-content: start;
+  justify-content: center;
+  margin: auto;
+}
+
+.proj-hs {
+  width: 100%;
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: 810px;
+  list-style: none;
+}
+
+.projects-container > * {
+  grid-column: 2 / -2;
+}
+
+.projects-container > .full {
+  grid-column: 1 / -1;
+}
+
+.proj-hs > li,
+.project-item {
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--gutter);
+  border-radius: 8px;
+  background-color: transparent;
+  border: 3px solid var(--secondaryColor); 
+}
+
+.project-title {
+  font-size: var(--smallerFont);
+  color: var(--secondaryColor);
+  text-align: center;
+}
+
+.project-image1 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/tower-defense-3d-icon.png) no-repeat;
+  background-size: cover;
+  align-items: center;
+  margin: auto;
+}
+
+.project-image2 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/weather-app-icon.png) no-repeat;
+  background-size: cover;
+}
+
+.project-image3 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/top-kicks-icon.png) no-repeat;
+  background-size: cover;
+}
+
+.project-image4 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/hoops-camp-icon.png) no-repeat;
+  background-size: cover;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.project-label {
+  text-align: center;
+  color: var(--secondaryColor);
+}
+
+.project-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 30px);
+  color: white;
+}

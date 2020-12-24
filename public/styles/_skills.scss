@@ -1,0 +1,45 @@
+.skills {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.app {
+  width: 100%;
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.hs {
+  width: 100%;
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(3, minmax(300px, auto));
+  grid-template-rows: repeat(2, minmax(400px, 400px));
+  list-style: none;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gutter);
+  border-radius: 8px;
+  background-color: transparent;
+  border: 3px solid var(--secondaryColor);
+}
