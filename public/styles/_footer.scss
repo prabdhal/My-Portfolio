@@ -1,0 +1,16 @@
+footer {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.footer-header {
+  font-size: var(--smallerFont);
+  color: var(--primaryColor);
+}

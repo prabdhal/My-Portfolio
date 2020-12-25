@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./_head.ejs'); %>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <h1 class="logo-text secondary-color">Portfolio</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link"><li>Home</li></a>
+        <a href="#about" class="nav-link"><li>About</li></a>
+        <a href="#projects" class="nav-link"><li>Projects</li></a>
+        <a href="#contact" class="nav-link"><li>Contact</li></a>
+      </div>
+      <div class="menu-btn">
+        <div class="line secondary-bg-color"></div>
+        <div class="line secondary-bg-color"></div>
+        <div class="line secondary-bg-color"></div>
+      </div>
+    </nav>
+  </header>
+  
+  <main id="home">
+    <article class="hero-text-container">
+      <h1 class="hero-secondary-header">Hello, My Name is</h1>
+      <div class="ml-100 mb-20">
+        <h1 class="hero-header secondary-color">Prabdeep</h1>
+        <h1 class="hero-header ml-100" id="remove-margin">Dhaliwal</h1>
+      </div>
+      <div>
+        <h4 class="hero-secondary-header">&#8211; Full Stack Developer / Unity Game Developer</h4>
+      </div>
+      <div class="mt-20">
+        <a href="#contact" class="anchor-btn">Contact Me</a>
+      </div>
+    </article>
+    <div class="hero-img-container">
+      <div class="hero-img"></div>
+    </div>
+  </main>
+
+  <section class="vp-100 about" id="about">
+    <div class="about-img mt-40"></div>
+    <article class="about-section">
+      <h3 class="secondary-header">Discover</h3>
+      <h3 class="header">&#8211; About Me</h3>
+      <p>
+        On September 2019, a couple months after graduating York University with a bachelors in Chemistry, 
+        I had no idea that my life was about to change. I decided to open Unity for the first time, only 
+        to find myself glued to the computer chair. I was spending as much time as I possibly could working 
+        on an ambitious first project -- a large RPG game. After several months, I was very proud of my 
+        progress, however, I realized that the project would take far too much time for a solo developer to 
+        finish. So I quickly started a new project that I knew would be both challenging and one that I 
+        could finish within a reasonable time frame. A couple months later, I was able to finish my first 
+        project, a 3D tower defence game. With this new found passion and confidence, I was able to challenge 
+        myself to learn HTML, CSS and Javascript, all while consistently testing my knowledge by creating 
+        small projects. I can proudly say that programming has changed my life completely, as it has not only 
+        taught me many invaluable lessons, but has also given me a great purpose in life. 
+      </p>
+      <a href="/download" class="anchor-btn mt-20">Resume</a>
+    </article>
+  </section>
+
+  <section class="vp-100 projects" id="projects">    
+    <div class="ml-50">
+      <h3 class="secondary-header">Work I've Done</h3>
+      <h3 class="header">&#8211; My Projects</h3>
+    </div>
+    <div class="projects-container">
+      <ul class="proj-hs full">
+        <li class="project-item">
+          <h3 class="project-title vm-10">Tower Defense 3D - Enemy Wave</h3>
+          <div>
+            <div class="project-image1"></div>
+          </div>
+          <article class="description-container">
+            <div class="vp-10">
+              A tower defence game developed using Unity, and 
+              playable on mobile, PC and as a WebGL.<br><br>
+              Features:
+              <p>- Programmed clean, modularized and reusable scripts with scriptable objects</p>
+              <p>- Utilized binary serialization to save and load user progress</p>
+              <p>- Applied Object-Oriented Programming</p>
+            </div>
+            <div class="project-label">
+              <h3 class="mb-10">Languages / Libraries / Softwares</h3>
+              <div class="project-skills">
+                <h5>C#</h5>
+                <h5>Unity</h5>
+                <h5>Photoshop</h5>
+              </div>
+            </div>
+          </article>
+          <div class="mt-auto">
+            <a href="https://github.com/prabdhal/TD3D-UnityGame.git" class="anchor-btn vm-auto">View Project</a>
+          </div>
+        </li>
+        <li class="project-item">
+          <h3 class="project-title vm-10">Weather App</h3>
+          <div>
+            <div class="project-image2"></div>
+          </div>
+          <article class="description-container">
+            <div class="vp-10">
+              A weather app created using rest api from openweathermap.org. You can search for a city 
+              and the app will return the weather information of that city.<br><br>
+              Features:
+              <p>- Integrated with Google Places API to get latitude and longitude coordinates of a location</p>
+              <p>- Integrated with OpenWeatherMap API to output the weather information based on the searched location coordinates</p>
+            </div>
+            <div class="project-label">
+              <h3 class="mb-10">Languages / Libraries / Softwares</h3>
+              <div class="project-skills">
+                <h5>HTML</h5>
+                <h5>CSS</h5>
+                <h5>JavaScript</h5>
+                <h5>Node.js</h5>
+                <h5>Express</h5>
+                <h5>Dotenv</h5>
+                <h5>Axios</h5>
+              </div>
+            </div>
+          </article>
+          <div class="mt-auto">
+            <a href="https://github.com/prabdhal/weather-app.git" class="anchor-btn vm-auto">View Project</a>
+          </div>
+        </li>
+        <li class="project-item">
+          <h3 class="project-title vm-10">Top Kicks Mock Website</h3>
+          <div>
+            <div class="project-image3"></div>
+          </div>
+          <article class="description-container">
+            <div class="vp-10">
+              A shoe company website where users can view the home page, as well as register or login to their accounts.
+              <br><br>
+              Features:
+              <p>- Used @hapi/joi to create a template for registeration, subscription and login validation</p>
+              <p>- Used bycrpt to hash passwords</p>
+              <p>- Implemented GET and POST routes</p>
+              <p>- Connected all registration and subscription data to MongoDB</p>
+            </div>
+            <div class="project-label">
+              <h3 class="mb-10">Languages / Libraries / Softwares</h3>
+              <div class="project-skills">
+                <h5>HTML</h5>
+                <h5>CSS</h5>
+                <h5>JavaScript</h5>
+                <h5>Node.js</h5>
+                <h5>Bcrypt</h5>
+                <h5>Express</h5>
+                <h5>MongoDB</h5>
+                <h5>Mongoose</h5>
+                <h5>Passport</h5>
+                <h5>@hapi/joi</h5>
+                <h5></h5>
+              </div>
+            </div>
+          </article>
+          <div class="mt-auto">
+            <a href="https://github.com/prabdhal/Top-Kicks-Website.git" class="anchor-btn vm-auto">View Project</a>
+          </div>
+        </li>
+        <li class="project-item">
+          <h3 class="project-title vm-10">Hoops Camp Mock Website</h3>
+          <div>
+            <div class="project-image4"></div>
+          </div>
+          <article class="description-container">
+            <div class="vp-10">
+              A basketball camp website where users can view the home page and register.<br><br>
+              Features:
+              <p>- Learned how to use express-validator to validate registration forms</p>
+              <p>- Learned how to use Sass to make code more clean and organized</p>
+              <p>- Touched up on some HTML, CSS and Javascript skills</p>
+              <p>- Connected all registration data to MongoDB</p>
+            </div>
+            <div class="project-label">
+              <h3 class="mb-10">Languages / Libraries / Softwares</h3>
+              <div class="project-skills">
+                <h5>HTML</h5>
+                <h5>Sass</h5>
+                <h5>JavaScript</h5>
+                <h5>Node.js</h5>
+                <h5>Dotenv</h5>
+                <h5>Express</h5>
+                <h5>MongoDB</h5>
+                <h5>Mongoose</h5>
+                <h5>Morgan</h5>
+              </div>
+            </div>
+          </article>
+          <div class="mt-auto">
+            <a href="https://github.com/prabdhal/Hoops-Camp-Website.git" class="anchor-btn vm-auto">View Project</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="vp-50" id="contact">
+    <section class="footer-container">
+      <div class="footer-col">
+        <h3 class="footer-header vm-10">Contact</h3>
+        <h5 class="line-height-1-3">Email: <a class="primary-color" href="mailto: prab.dhaliwal95@gmail.com">Prab.dhaliwal95@gmail.com</a></h5>
+        <h5 class="line-height-1-3">Phone Number: (647) 642-3917</h5>
+        <h5 class="line-height-1-3">Location: Guelph, Ontario</h5>
+        <div class="icon-containers mt-20">
+          <a class="icon-link" href="https://www.linkedin.com/in/prabdeep-dhaliwal/">
+            <div class="LinkedIn-icon"></div>
+          </a>
+          <a class="icon-link" href="https://github.com/prabdhal">
+            <div class="GitHub-icon"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </footer>
+  
+</body>
+</html>
