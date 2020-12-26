@@ -1,0 +1,17 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.game-screen {
+  width: 960px;
+  height: 600px;
+  border: 0;
+}
+
+.game-description {
+  width: 100%;
+  max-width: 950px;
+}

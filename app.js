@@ -24,6 +24,10 @@ app.get('/home', (req, res) => {
   res.render('index');
 });
 
+app.get('/game', (req, res) => {
+  res.render('tdgame');
+});
+
 app.get('/download', (req, res) => {
   
   const file = `${__dirname}/upload/PrabdeepDhaliwalsResume.DOCX`;

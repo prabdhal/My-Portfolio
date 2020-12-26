@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script rel="text/javascript" src="/responsive.js" defer></script>
+    <title>My Portfolio - TD3D Game</title>
+  </head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <h1 class="logo-text secondary-color">Portfolio</h1>
+      </div>
+      <div class="nav-links">
+        <a href="/home" class="nav-link"><li>Home</li></a>
+        <a href="/home#about" class="nav-link"><li>About</li></a>
+        <a href="/home#projects" class="nav-link"><li>Projects</li></a>
+        <a href="#contact" class="nav-link"><li>Contact</li></a>
+      </div>
+      <div class="menu-btn">
+        <div class="line secondary-bg-color"></div>
+        <div class="line secondary-bg-color"></div>
+        <div class="line secondary-bg-color"></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="vp-100 game" id="about">
+    <h1>Tower Defence 3D - Enemy Wave</h1><br>
+    <iframe class="game-screen" src="https://i.simmer.io/@prabdhal/tower-defence-3d-enemy-wave"></iframe>
+    <br><br>
+    <div class="game-description">
+      <label>Description:</label>
+      <figcaption> 
+        A 3D tower defence game with 20 levels to complete. Earn up to 3 stars by completing levels 
+        without taking any castle damage. Use your rewards to buy tower upgrades and special items 
+        to help complete more difficult levels as your progress. You will be required to strategize 
+        with over 16 unique tower upgrades, 4 special items and 9 unique enemies, each of which 
+        have varying stats and resistances.
+      </figcaption>
+      <br>
+      <label>Controls:</label>
+      <figcaption>
+        Mouse to navigate through menus and to buy and place towers. 
+        Right and Left arrows to rotate camera angle in 90 degree intervals.
+      </figcaption>
+    </div>    
+  </section>
+
+  <%- include('./_footer.ejs'); %> 
+
+</body>
+</html>

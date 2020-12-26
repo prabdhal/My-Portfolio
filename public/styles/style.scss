@@ -60,7 +60,6 @@ button {
   border-radius: 10px;
 }
 
-
 .primary-color {
   color: var(--primaryColor);  
 }
@@ -199,6 +198,7 @@ button {
 @import "Skills";
 @import "Projects";
 @import "Footer";
+@import "Game";
 
 @media screen and (max-width: 1800px) {
   
