@@ -1,7 +1,10 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const express = require('express');
 const mongoose = require('mongoose');
+const weatherRoute = require('./weatherApp/weatherRoute');
 
 const app = express();
 
@@ -12,6 +15,7 @@ app.listen(3000);
 app.set('view engine', 'ejs');
 
 // Middleware & Static Files
+app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
@@ -27,6 +31,8 @@ app.get('/home', (req, res) => {
 app.get('/game', (req, res) => {
   res.render('tdgame');
 });
+
+app.use('/', weatherRoute);
 
 app.get('/download', (req, res) => {
   

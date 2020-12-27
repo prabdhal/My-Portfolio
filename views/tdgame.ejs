@@ -9,20 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/style.css">
     <script rel="text/javascript" src="/responsive.js" defer></script>
+    <script rel="text/javascript" src="/tdgame.js" defer></script>
     <title>My Portfolio - TD3D Game</title>
   </head>
 <body>
   <header>
     <nav>
       <div class="logo-container">
-        <h1 class="logo-text secondary-color">Portfolio</h1>
+        <a href="/home" class="logo-text secondary-color">Portfolio</a>
       </div>
-      <div class="nav-links">
-        <a href="/home" class="nav-link"><li>Home</li></a>
-        <a href="/home#about" class="nav-link"><li>About</li></a>
-        <a href="/home#projects" class="nav-link"><li>Projects</li></a>
-        <a href="#contact" class="nav-link"><li>Contact</li></a>
-      </div>
+      <ul class="nav-links">
+        <li><a href="/home#home" class="nav-link">Home</a></li>
+        <li><a href="/home#about" class="nav-link">About</a></li>
+        <li><a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
+        <ul class="dropdown-content" data-projects-drop-down>
+          <li><a href="/game" class="drop-link">Tower Defence 3D - Enemy Wave</a></li>
+          <li><a href="/weatherapp" class="drop-link">Weather App</a></li>
+          <li><a href="" class="drop-link">Top Kicks Website</a></li>
+          <li><a href="" class="drop-link">Hoops Camp Website</a></li>
+        </ul>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
       <div class="menu-btn">
         <div class="line secondary-bg-color"></div>
         <div class="line secondary-bg-color"></div>
@@ -31,11 +38,11 @@
     </nav>
   </header>
 
-  <section class="vp-100 game" id="about">
-    <h1>Tower Defence 3D - Enemy Wave</h1><br>
+  <section class="vp-100 game" id="game">
+    <h1 class="header secondary-color">Tower Defence 3D - Enemy Wave</h1><br>
     <iframe class="game-screen" src="https://i.simmer.io/@prabdhal/tower-defence-3d-enemy-wave"></iframe>
     <br><br>
-    <div class="game-description">
+    <div class="game-description complementary-bg-color">
       <label>Description:</label>
       <figcaption> 
         A 3D tower defence game with 20 levels to complete. Earn up to 3 stars by completing levels 

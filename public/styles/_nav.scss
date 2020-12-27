@@ -20,6 +20,9 @@ nav {
 
 .logo-text {
   padding: var(--navPadding);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .nav-links {
@@ -35,13 +38,6 @@ nav {
   font-weight: 600;
   color: white;
 }
-
-.nav-link:hover {
-  animation: navHover 200ms ease;
-  animation-fill-mode: forwards;
-  color: var(--secondaryColor);
-}
-
 .nav-link-alt {
   text-decoration: none;
   padding: var(--navPadding);
@@ -50,10 +46,73 @@ nav {
   color: white;
 }
 
+.dropdown {
+  padding: var(--navPadding);
+  margin: 0 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 94px;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px;
+  background-color: var(--secondaryColor);
+  border: 2px solid var(--complementaryColor);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.dropdown-content-alt {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 94px;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px;
+  background-color: var(--complementaryColor);
+  border: 2px solid var(--secondaryColor);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.open-dropdown {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+li, .drop-link {
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+}
+li, .drop-link-alt {
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.nav-link:hover {
+  animation: navHover 200ms ease;
+  animation-fill-mode: forwards;
+  color: var(--secondaryColor);
+}
 .nav-link-alt:hover {
   animation: navHoverAlt 200ms ease;
   animation-fill-mode: forwards;
-  color: var(--primaryColor);
+  color: black;
+}
+
+.drop-link:hover {
+  color: black;
+}
+.drop-link-alt:hover {
+  color: var(--secondaryColor);
 }
 
 .menu-btn {
@@ -61,7 +120,6 @@ nav {
   margin: auto 10px;
   z-index: 200;
 }
-
 .line {
   width: 35px;
   height: 5px;

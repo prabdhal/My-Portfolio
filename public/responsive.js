@@ -6,23 +6,44 @@ const navLinks = document.querySelector('.nav-links');
 const navLink = document.querySelectorAll('.nav-link');
 const menuLines = document.querySelectorAll('.line');
 const menuBtn = document.querySelector('.menu-btn');
+const dropContent = document.querySelectorAll('.dropdown-content');
+const dropLink = document.querySelectorAll('.drop-link');
+const projectsNavLink = document.querySelector('[data-projects-nav-link]')
+const projectsDropDown = document.querySelector('[data-projects-drop-down]')
+let x = window.matchMedia("(max-width: 1100px)");
+
+
+mediaQuery(x);
+x.addEventListener('change', mediaQuery)
 
 window.onscroll = function changeNavBarColor() {
   "use strict";
   if (navLinks.classList.contains("open")) return;
 
+  // changes colors the navbar, logotext, navlink and menu button 
+  // when user scrolls down from top
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     navBar.classList.add('secondary-bg-color');
     logoText.classList.add('primary-color');
     logoText.classList.remove('secondary-color');
     navLink.forEach(link => {
-      link.classList.remove('nav-link');
       link.classList.add('nav-link-alt');
+      link.classList.remove('nav-link');
     });
     menuLines.forEach(line => {
       line.classList.add('primary-bg-color');
       line.classList.remove('secondary-bg-color');
     });
+    dropContent.forEach(content => {
+      content.classList.add('dropdown-content-alt');
+      content.classList.remove('dropdown-content');
+    });
+    dropLink.forEach(link => {
+      link.classList.add('drop-link-alt');
+      link.classList.remove('drop-link');
+    });
+    // changes colors of the navbar, logotext, navlink and menu button 
+    // when user scrolls all the way to the top of the page
   } else if (document.body.scrollTop <= 0 || document.documentElement.scrollTop <= 0) {
     navBar.classList.remove('secondary-bg-color');
     logoText.classList.add('secondary-color');
@@ -35,10 +56,19 @@ window.onscroll = function changeNavBarColor() {
       line.classList.add('secondary-bg-color');
       line.classList.remove('primary-bg-color');
     });
+    dropContent.forEach(content => {
+      content.classList.add('dropdown-content');
+      content.classList.remove('dropdown-content-alt');
+    });
+    dropLink.forEach(link => {
+      link.classList.add('drop-link');
+      link.classList.remove('drop-link-alt');
+    });
   };
 };
 
-// Toggles menu background
+// Toggles menu background and handles menu button colors
+// depending on the nav bars position
 menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle("open");
   menuLines.forEach(line => {
@@ -68,6 +98,7 @@ navLink.forEach(link => {
 // removes margin-left styling from hero div and text
 // for better responsive fit at max width 1100px
 function mediaQuery(x) {
+  if (divMargin == null) return;
   if (x.matches) {
     divMargin.classList.remove('ml-100');
     heroHeaderMargin.classList.remove('ml-100');
@@ -77,6 +108,14 @@ function mediaQuery(x) {
   }
 }
 
-let x = window.matchMedia("(max-width: 1100px)");
-mediaQuery(x);
-x.addEventListener("change", mediaQuery)
+projectsNavLink.addEventListener('mouseover', openDropDown);
+projectsNavLink.addEventListener('mouseout', closeDropDown);
+projectsDropDown.addEventListener('mouseover', openDropDown);
+projectsDropDown.addEventListener('mouseout', closeDropDown);
+
+function openDropDown() {
+  projectsDropDown.classList.add('open-dropdown');
+}
+function closeDropDown() {
+  projectsDropDown.classList.remove('open-dropdown');
+}
