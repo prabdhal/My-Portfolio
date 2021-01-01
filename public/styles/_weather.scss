@@ -1,10 +1,9 @@
-
 .weather {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-content: center;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -17,7 +16,7 @@
   width: 100%;
   max-width: 600px;
   box-shadow: 2px 2px 5px black, -1px -1px 5px black;
-  background: linear-gradient(#0D85D8,#55c9e9, #72d5ee);
+  background: linear-gradient(#0d85d8, #55c9e9, #72d5ee);
   padding: 50px 0;
   justify-content: center;
   margin: auto;
@@ -27,7 +26,7 @@
   justify-content: center;
 }
 
-.weather-informtion {
+.weather-information {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,8 +45,8 @@ input.search-box {
   border: 1px solid black;
   border-bottom: 2px solid rgb(0, 0, 0);
 }
- 
-input.search-box[type=text] {
+
+input.search-box[type="text"] {
   font-size: 1rem;
 }
 
@@ -92,8 +91,8 @@ input.search-box[type=text] {
   display: grid;
   width: 100%;
   max-width: 500px;
-  grid-template-rows: repeat(2, minmax(50px,1fr));
-  grid-template-columns: repeat(3, minmax(150px,1fr));
+  grid-template-rows: repeat(2, minmax(50px, 1fr));
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
   grid-gap: 20px;
   margin: auto;
   padding: 20px 0;
@@ -115,43 +114,43 @@ input.search-box[type=text] {
 
 // ################# BACKGROUNDS #############################
 .sunny {
-  background: url('/imgs/Sunny.png') no-repeat;
+  background: url("/imgs/Sunny.png") no-repeat;
   background-size: cover;
 }
 .rain {
-  background: url('/imgs/Rainy.jpg') no-repeat;
+  background: url("/imgs/Rainy.jpg") no-repeat;
   background-size: cover;
 }
 .clouds {
-  background: url('/imgs/Cloudy.jpg');
+  background: url("/imgs/Cloudy.jpg") no-repeat;
   background-size: cover;
 }
 .snow {
-  background: url('/imgs/Snowy.jpg') no-repeat;
+  background: url("/imgs/Snowy.jpg") no-repeat;
   background-size: cover;
 }
 .clear {
-  background: url('/imgs/Clear.jpg') no-repeat;
+  background: url("/imgs/Clear.jpg") no-repeat;
   background-size: cover;
 }
 .misty {
-  background: url('/imgs/Misty.png') no-repeat;
+  background: url("/imgs/Misty.png") no-repeat;
   background-size: cover;
 }
 .fog {
-  background: url('/imgs/fog.webp') no-repeat;
+  background: url("/imgs/Fog.webp") no-repeat;
   background-size: cover;
 }
 .haze {
-  background: url('/imgs/Haze.jpg') no-repeat;
+  background: url("/imgs/Haze.jpg") no-repeat;
   background-size: cover;
 }
 .smoke {
-  background: url('/imgs/Smoke.jpg') no-repeat;
+  background: url("/imgs/Smoke.jpg") no-repeat;
   background-size: cover;
 }
 .default {
-  background: linear-gradient(#0D85D8,#7AD7F0, #92DFF3);
+  background: linear-gradient(#0d85d8, #7ad7f0, #92dff3);
   background-size: cover;
 }
 
