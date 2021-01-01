@@ -8,12 +8,89 @@
 
 .game-screen {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   border: 0;
 }
 
 .game-description {
-  width: 100%;
+  width: 95%;
   max-width: 1000px;
   padding: 20px;
+}
+
+.comments-section {
+  width: 95%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border: 2px solid var(--secondaryColor);
+  background-color: var(--complementaryColor);
+}
+
+.comments-label {
+  padding: 20px 0 10px 0;
+}
+
+.comments-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  outline: none;
+  border: 2px solid var(--complementaryColor);
+  border-radius: 3px;
+}
+
+.comments-textarea {
+  padding: 5px;
+  width: 100%;
+  max-width: 900px;
+  height: 150px;
+  resize: none;
+  outline: none;
+  border: 2px solid var(--complementaryColor);
+  border-radius: 3px;
+}
+
+.comments-posted {
+  list-style: none;
+}
+
+.user-post {
+  padding: 20px;
+  margin: 10px 0;
+  border: 2px solid var(--secondaryColor);
+}
+
+.user-name {
+  font-weight: 600;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.user-comments {
+  max-width: 600px;
+}
+
+.btn-container {
+  margin: 20px 0 10px 10px;
+}
+
+.reply-anchor-btn {
+  text-decoration: none;
+  color: var(--secondaryColor);
+  cursor: pointer;
 }

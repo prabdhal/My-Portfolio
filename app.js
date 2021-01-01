@@ -4,9 +4,15 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const mongoose = require('mongoose');
-const weatherRoute = require('./weatherApp/weatherRoute');
+const weatherRoute = require('./Apps/weatherRoute');
+const gameRoute = require('./Apps/gameRoute');
 
 const app = express();
+
+// Connect to MongoDB
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB...'))
+  .catch(err => console.log(err))
 
 // Connect to Database
 app.listen(3000);
@@ -28,10 +34,7 @@ app.get('/home', (req, res) => {
   res.render('index');
 });
 
-app.get('/game', (req, res) => {
-  res.render('tdgame');
-});
-
+app.use('/', gameRoute);
 app.use('/', weatherRoute);
 
 app.get('/download', (req, res) => {

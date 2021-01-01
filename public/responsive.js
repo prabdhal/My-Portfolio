@@ -3,6 +3,7 @@ const heroHeaderMargin = document.getElementById('remove-margin');
 const navBar = document.querySelector('header');
 const logoText = document.querySelector('.logo-text');
 const navLinks = document.querySelector('.nav-links');
+const navLinksListItem = document.querySelectorAll('.nav-links li');
 const navLink = document.querySelectorAll('.nav-link');
 const menuLines = document.querySelectorAll('.line');
 const menuBtn = document.querySelector('.menu-btn');
@@ -71,6 +72,9 @@ window.onscroll = function changeNavBarColor() {
 // depending on the nav bars position
 menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle("open");
+  navLinksListItem.forEach(listItem => {
+    listItem.classList.toggle("fade");
+  });
   menuLines.forEach(line => {
     if (!navLinks.classList.contains("open") && !navBar.classList.contains('secondary-bg-color')
     || !navLinks.classList.contains("open") && !navBar.classList.contains('secondary-bg-color')) {
@@ -90,8 +94,11 @@ menuBtn.addEventListener('click', () => {
 
 // turns off menu background after clicking a link
 navLink.forEach(link => {
-  link.addEventListener("click", () => {
+  link.addEventListener('click', () => {
     navLinks.classList.remove("open");
+    navLinksListItem.forEach(listItem => {
+    listItem.classList.remove("fade");
+  });
   });
 });
 

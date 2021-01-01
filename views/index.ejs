@@ -18,16 +18,16 @@
         <a href="/home" class="logo-text secondary-color">Portfolio</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
+        <li class="nav-list"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-list"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-list"><a href="#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
         <ul class="dropdown-content" data-projects-drop-down>
-          <li><a href="/game" class="drop-link">Tower Defence 3D - Enemy Wave</a></li>
-          <li><a href="/weatherapp" class="drop-link">Weather App</a></li>
-          <li><a href="" class="drop-link">Top Kicks Website</a></li>
-          <li><a href="" class="drop-link">Hoops Camp Website</a></li>
+          <li class="nav-list"><a href="/game" class="drop-link">Tower Defence 3D - Enemy Wave</a></li>
+          <li class="nav-list"><a href="/weatherapp" class="drop-link">Weather App</a></li>
+          <li class="nav-list"><a href="https://topkicks.prabdhaliwal.com/" class="drop-link">Top Kicks Website</a></li>
+          <li class="nav-list"><a href="" class="drop-link">Hoops Camp Website</a></li>
         </ul>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="menu-btn">
         <div class="line secondary-bg-color"></div>
@@ -61,7 +61,7 @@
     <article class="about-section">
       <h3 class="secondary-header">Discover</h3>
       <h3 class="header">&#8211; About Me</h3>
-      <p>
+      <p class="about-para">
         On September 2019, a couple months after graduating York University with a bachelors in Chemistry, 
         I had no idea that my life was about to change. I decided to open Unity for the first time, only 
         to find myself glued to the computer chair. I was spending as much time as I possibly could working 
@@ -93,11 +93,11 @@
           <article class="description-container">
             <figcaption class="vp-10">
               A tower defence game developed using Unity, and 
-              playable on mobile, PC and as a WebGL.<br><br>
+              playable on mobile, web and as standalone on PC/Laptop.<br><br>
               Features:
-              <p>- Programmed clean, modularized and reusable scripts with scriptable objects</p>
+              <p>- Programmed clean, modularized and reusable scripts with scriptable objects and object-orientated programming</p>
               <p>- Utilized binary serialization to save and load user progress</p>
-              <p>- Applied Object-Oriented Programming</p>
+              <p>- Created complex stats for tower, enemy and special items</p>
             </figcaption>
             <figcaption class="project-label">
               <h3 class="mb-10">Languages / Libraries / Softwares</h3>
@@ -119,11 +119,12 @@
           </div>
           <article class="description-container">
             <figcaption class="vp-10">
-              A weather app created using rest api from openweathermap.org. You can search for a city 
+              A weather app created using REST API from openweathermap.org. You can search for a city 
               and the app will return the weather information of that city.<br><br>
               Features:
-              <p>- Integrated with Google Places API to get latitude and longitude coordinates of a location</p>
-              <p>- Integrated with OpenWeatherMap API to output the weather information based on the searched location coordinates</p>
+              <p>- Integrated Google maps API to fetch both latitude and longitude coordinates of the location searched by the user</p>
+              <p>- Integrated weather API from openweathermap.org in order to pass the location coordinates to the weather API via POST request method</p>
+              <p>- Created a Javascript function responsible for taking the JSON data from the weather API and displaying it to the user in a readible format</p>
             </figcaption>
             <figcaption class="project-label">
               <h3 class="mb-10">Languages / Libraries / Softwares</h3>
@@ -153,9 +154,9 @@
               <br><br>
               Features:
               <p>- Used @hapi/joi to create a template for registeration, subscription and login validation</p>
-              <p>- Used bycrpt to hash passwords</p>
-              <p>- Implemented GET and POST routes</p>
-              <p>- Connected all registration and subscription data to MongoDB</p>
+              <p>- Used bycrpt library to hash passwords for user security</p>
+              <p>- Used flash library to display error/success messages to user during the registration, subscription and login process</p>
+              <p>- Used passport library for user authentication to ensure the user exists in MongoDB</p>
             </figcaption>
             <figcaption class="project-label">
               <h3 class="mb-10">Languages / Libraries / Softwares</h3>
@@ -175,7 +176,7 @@
             </figcaption>
           </article>
           <div class="mt-auto">
-            <a href="https://github.com/prabdhal/Top-Kicks-Website.git" class="anchor-btn vm-auto">View Project</a>
+            <a href="https://topkicks.prabdhaliwal.com/" class="anchor-btn vm-auto">View Project</a>
           </div>
         </div>
         <div class="project-item">
@@ -187,9 +188,8 @@
             <figcaption class="vp-10">
               A basketball camp website where users can view the home page and register.<br><br>
               Features:
-              <p>- Learned how to use express-validator to validate registration forms</p>
-              <p>- Learned how to use Sass to make code more clean and organized</p>
-              <p>- Touched up on some HTML, CSS and Javascript skills</p>
+              <p>- Used express-validator to validate registration forms</p>
+              <p>- Used Sass to make styling code more clean and organized into several pages</p>
               <p>- Connected all registration data to MongoDB</p>
             </figcaption>
             <figcaption class="project-label">
