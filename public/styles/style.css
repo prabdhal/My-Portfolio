@@ -23,7 +23,7 @@ html {
 body {
   background: var(--primaryColor);
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -35,12 +35,12 @@ p {
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
   --primaryColor: black;
-  --secondaryColor: #FE4E00;
+  --secondaryColor: #fe4e00;
   --complementaryColor: rgb(44, 44, 44);
   --largeFont: 5rem;
   --mediumFont: 2rem;
@@ -700,7 +700,7 @@ h4.hero-secondary-header::first-letter {
   height: 223px;
   width: 350px;
   background-color: white;
-  background: url(../imgs/hoops-camp-icon.png) no-repeat;
+  background: url(../imgs/todo-list-icon.PNG) no-repeat;
   background-size: cover;
 }
 
@@ -880,7 +880,7 @@ footer {
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -898,8 +898,8 @@ footer {
   max-width: 600px;
   -webkit-box-shadow: 2px 2px 5px black, -1px -1px 5px black;
           box-shadow: 2px 2px 5px black, -1px -1px 5px black;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0D85D8), color-stop(#55c9e9), to(#72d5ee));
-  background: linear-gradient(#0D85D8, #55c9e9, #72d5ee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d85d8), color-stop(#55c9e9), to(#72d5ee));
+  background: linear-gradient(#0d85d8, #55c9e9, #72d5ee);
   padding: 50px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -913,7 +913,7 @@ footer {
           justify-content: center;
 }
 
-.weather-informtion {
+.weather-information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -942,7 +942,7 @@ input.search-box {
   border-bottom: 2px solid black;
 }
 
-input.search-box[type=text] {
+input.search-box[type="text"] {
   font-size: 1rem;
 }
 
@@ -1033,7 +1033,7 @@ input.search-box[type=text] {
 }
 
 .clouds {
-  background: url("/imgs/Cloudy.jpg");
+  background: url("/imgs/Cloudy.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1053,7 +1053,7 @@ input.search-box[type=text] {
 }
 
 .fog {
-  background: url("/imgs/fog.webp") no-repeat;
+  background: url("/imgs/Fog.webp") no-repeat;
   background-size: cover;
 }
 
@@ -1068,8 +1068,8 @@ input.search-box[type=text] {
 }
 
 .default {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0D85D8), color-stop(#7AD7F0), to(#92DFF3));
-  background: linear-gradient(#0D85D8, #7AD7F0, #92DFF3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d85d8), color-stop(#7ad7f0), to(#92dff3));
+  background: linear-gradient(#0d85d8, #7ad7f0, #92dff3);
   background-size: cover;
 }
 
@@ -1098,8 +1098,8 @@ input.search-box[type=text] {
     overflow-x: scroll;
     -ms-scroll-snap-type: x proximity;
         scroll-snap-type: x proximity;
-    padding-bottom: calc(.75 * var(--gutter));
-    margin-bottom: calc(-.25 * var(--gutter));
+    padding-bottom: calc(0.75 * var(--gutter));
+    margin-bottom: calc(-0.25 * var(--gutter));
   }
 }
 
@@ -1167,20 +1167,24 @@ input.search-box[type=text] {
   .open::-webkit-scrollbar {
     display: none;
   }
-  li.nav-list, .nav-link {
+  li.nav-list,
+  .nav-link {
     margin: 50px 0;
     font-size: 2rem;
   }
-  li.nav-list, .nav-link:hover {
+  li.nav-list,
+  .nav-link:hover {
     color: var(--primaryColor);
     -webkit-animation: none;
             animation: none;
   }
-  li.nav-list, .nav-link-alt {
+  li.nav-list,
+  .nav-link-alt {
     margin: 50px 0;
     font-size: 2rem;
   }
-  li.nav-list, .nav-link-alt:hover {
+  li.nav-list,
+  .nav-link-alt:hover {
     color: var(--primaryColor);
     -webkit-animation: none;
             animation: none;
@@ -1202,17 +1206,14 @@ input.search-box[type=text] {
     overflow-x: scroll;
     -ms-scroll-snap-type: x proximity;
         scroll-snap-type: x proximity;
-    padding-bottom: calc(.75 * var(--gutter));
-    margin-bottom: calc(-.25 * var(--gutter));
+    padding-bottom: calc(0.75 * var(--gutter));
+    margin-bottom: calc(-0.25 * var(--gutter));
   }
 }
 
 @media screen and (max-width: 900px) {
-  .hero-text-container {
-    width: 100%;
-  }
   .projects-container {
-    width: 100%;
+    width: 60%;
   }
   .project-item {
     -webkit-box-orient: vertical;

@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const router = require('express').Router();
-const User = require('../models/user');
 
 
 router.get('/game', async (req, res) => {

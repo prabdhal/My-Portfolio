@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 *::selection {
@@ -9,59 +9,21 @@
   background-color: var(--secondaryColor);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--primaryColor);
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
 
-p {
-  line-height: 1.4rem;
+body {
+  background: var(--primaryColor);
+  font-family: "Itim", cursive;
 }
 
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Itim", cursive;
 }
 
-:root {
-  --primaryColor: black;
-  --secondaryColor: #fe4e00;
-  --complementaryColor: rgb(44, 44, 44);
-  --largeFont: 5rem;
-  --mediumFont: 2rem;
-  --smallFont: 1.5rem;
-  --smallerFont: 1.2rem;
-  --regularFont: 1rem;
-  --navPadding: 30px 15px;
-  --smallverticalSpacing: 10px 0;
-  --mediumverticalSpacing: 20px 0;
-  --largeverticalSpacing: 30px 0;
-  --gutter: 20px;
-}
-
-::-webkit-scrollbar {
-  height: 7px; /* height of horizontal scrollbar ← You're missing this */
-  width: 5px;
-  border: 1px solid var(--complementaryColor);
-  background-color: var(--complementaryColor);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:horizontal {
-  background: var(--secondaryColor);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:vertical {
-  border: 1px solid var(--complementaryColor);
-  background: var(--secondaryColor);
-  border-radius: 10px;
+input[type="text"] {
+  font-family: "Itim", cursive;
 }
 
 .white-color {
@@ -116,14 +78,162 @@ button {
   color: var(--secondaryColor);
 }
 
-.hide {
-  display: none;
+:root {
+  --primaryColor: black;
+  --secondaryColor: #fe4e00;
+  --complementaryColor: rgb(44, 44, 44);
+  --lightBlue: rgb(122, 252, 255);
+  --pink: rgb(255, 101, 163);
+  --lightPink: rgb(255, 126, 185);
+  --lightYellow: rgb(254, 255, 156);
+  --yellow: rgb(255, 247, 64);
+  --dangerColor: rgb(255, 51, 51);
+  --successColor: rgb(128, 255, 0);
+  --largeFontTodo: 1.5rem;
+  --mediumFontTodo: 1.3rem;
+  --regularFontTodo: 1rem;
+  --largeFont: 5rem;
+  --mediumFont: 2rem;
+  --smallFont: 1.5rem;
+  --smallerFont: 1.2rem;
+  --regularFont: 1rem;
+  --btnSmallPadding: 2px;
+  --navPadding: 30px 15px;
+  --btnPadding: 5px;
+  --smallverticalSpacing: 10px 0;
+  --mediumverticalSpacing: 20px 0;
+  --largeverticalSpacing: 30px 0;
+  --gutter: 20px;
+}
+
+.app {
+  position: relative;
+  height: 100%;
+  background-color: var(--lightYellow);
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 80vh;
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+  border-right: 2px solid red;
+  border-left: 2px solid red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-container {
+  margin-right: 10px;
+}
+
+.date {
+  display: flex;
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+  align-self: right;
+  align-content: right;
+  font-size: var(--mediumFontTodo);
+}
+
+.page-line {
+  width: 100%;
+  border: 2px solid black;
+  margin: 2rem 0;
+  border-width: thin;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  height: 30px;
+  padding: var(--btnPadding);
+  margin: 3px;
+  border-radius: 3px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.small-btn {
+  padding: var(--btnSmallPadding);
+  margin: 3px;
+  border-radius: 3px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: var(--dangerColor);
+}
+
+.btn-success {
+  background-color: var(--successColor);
+}
+
+.btn-primary {
+  background-color: var(--lightBlue);
+}
+
+.input-box {
+  min-width: 200px;
+  height: 30px;
+  padding: var(--btnPadding);
+  border-radius: 3px;
+  outline: 0;
+  border: 1px solid black;
+}
+
+.rename-btns {
+  width: 55px;
+}
+
+.count {
+  margin: 5px 0 0 0;
+  font-size: var(--regularFontTodo);
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.todo-footer {
+  min-height: 10vh;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+  font-size: var(--largeFontTodo);
+  padding: 20px;
+  background-color: rgb(150, 75, 0);
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.footer-header {
+  font-size: var(--smallFont);
+  color: var(--primaryColor);
 }
 
 .line-height-1-3 {
   line-height: 1.3rem;
 }
-
 .mt-auto {
   margin-top: auto;
 }
@@ -210,23 +320,40 @@ button {
   text-decoration: none;
 }
 
-@import "Nav";
-@import "Hero";
-@import "About";
-@import "Skills";
-@import "Projects";
-@import "Footer";
-@import "Game";
-@import "Weather";
+@import "Navbar";
+@import "List";
+@import "Task";
 
-@media screen and (max-width: 1800px) {
-  .proj-hs {
-    padding: 0 20px;
+.hide {
+  display: none;
+}
 
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
-    padding-bottom: calc(0.75 * var(--gutter));
-    margin-bottom: calc(-0.25 * var(--gutter));
+@media screen and (max-width: 1550px) {
+  .todo-lists-container {
+    transition-delay: 100ms;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .todo-lists-container {
+    transition: all 200ms ease-in-out;
+  }
+
+  .task-list-container {
+    transition: all 200ms ease-in-out;
+  }
+
+  //Hide
+  .shift-todo-lists {
+    transform: translate(70%, -25%);
+    top: 25%;
+    right: 150%;
+  }
+
+  // Hide
+  .shift-tasks {
+    top: 80%;
+    right: -50%;
   }
 }
 
@@ -320,69 +447,56 @@ button {
     display: block;
     cursor: pointer;
   }
-
-  .hs {
-    grid-template-columns: repeat(6, minmax(300px, 400px));
-    grid-template-rows: minmax(300px, 300px);
-    padding: 0 20px;
-
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
-    padding-bottom: calc(0.75 * var(--gutter));
-    margin-bottom: calc(-0.25 * var(--gutter));
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .projects-container {
-    width: 60%;
-  }
-  .project-item {
-    flex-direction: column;
-    align-content: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .about {
-    flex-direction: column-reverse;
-    justify-content: center;
-    margin: auto;
-  }
-
-  .about-section {
-    width: 80%;
-    justify-content: center;
-    margin: auto;
-  }
-
-  .about-img {
-    justify-content: center;
-    margin: auto;
-  }
 }
 
 @media screen and (max-width: 500px) {
   html {
     font-size: 70%;
   }
+  .todo-lists-container {
+    width: 95%;
+    min-width: 0;
+    transition-delay: 0ms;
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+  }
 
-  .hero-text-container,
-  .hero-img-container {
+  .task-list-container {
+    min-width: 0;
+    width: 95%;
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+  }
+
+  .list,
+  .task {
+    min-width: 0px;
+  }
+
+  .input-box {
+    width: 50%;
+    min-width: 0;
+  }
+
+  .rename-container,
+  .list-rename-input,
+  .task-rename-input {
     width: 100%;
+    min-width: 0;
   }
 
-  .about-section {
-    width: 90%;
-    margin: 20px auto;
+  //Hide
+  .shift-todo-lists {
+    transform: translate(70%, -25%);
+    top: 25%;
+    right: 150%;
+    opacity: 0;
   }
 
-  .projects-container {
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .proj-hs {
-    grid-template-rows: 650px;
+  // Hide
+  .shift-tasks {
+    top: 80%;
+    right: -50%;
+    opacity: 0;
   }
 }

@@ -1,0 +1,153 @@
+.todo-nav {
+  min-height: 10vh;
+  padding: 20px 0 0 10px;
+  background-color: rgb(150, 75, 0);
+}
+
+.todo-nav-title {
+  font-size: 2rem;
+}
+
+header {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  margin: auto 0;
+}
+
+.logo-text {
+  padding: var(--navPadding);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: auto 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: var(--navPadding);
+  margin: 0 20px;
+  font-weight: 600;
+  color: white;
+}
+.nav-link-alt {
+  text-decoration: none;
+  padding: var(--navPadding);
+  margin: 0 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px;
+  background-color: var(--secondaryColor);
+  border: 2px solid var(--complementaryColor);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.dropdown-content-alt {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px;
+  background-color: var(--complementaryColor);
+  border: 2px solid var(--secondaryColor);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.open-dropdown {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+li,
+.drop-link {
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+}
+li,
+.drop-link-alt {
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.nav-link:hover {
+  animation: navHover 200ms ease;
+  animation-fill-mode: forwards;
+  color: var(--secondaryColor);
+}
+.nav-link-alt:hover {
+  animation: navHoverAlt 200ms ease;
+  animation-fill-mode: forwards;
+  color: black;
+}
+
+.drop-link:hover {
+  color: black;
+}
+.drop-link-alt:hover {
+  color: var(--secondaryColor);
+}
+
+.menu-btn {
+  display: none;
+  margin: auto 10px;
+  z-index: 200;
+}
+.line {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+}
+
+@keyframes navHover {
+  from {
+    color: white;
+  }
+  to {
+    color: var(--secondaryColor);
+  }
+}
+
+@keyframes navHoverAlt {
+  from {
+    color: white;
+  }
+  to {
+    color: var(--primaryColor);
+  }
+}
