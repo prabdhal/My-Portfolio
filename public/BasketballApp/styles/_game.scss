@@ -1,0 +1,179 @@
+.games-today {
+  gap: 20px;
+}
+
+.game-block {
+  max-width: 450px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--primaryColorNBA);
+  box-shadow: inset 1px 1px 3px black, inset -1px -1px 3px black;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.team-score-block {
+  width: 120px;
+}
+
+.game-information {
+  width: 210px;
+  padding: 0 10px;
+}
+
+.game-date {
+  margin-top: 15px;
+}
+
+.game-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.team-logo {
+  width: var(--logoSize);
+  height: var(--logoSize);
+  margin: auto;
+}
+
+.team-name-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.team-score {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+// Team Logo Classes
+.hawks {
+  background: url("../imgs/hawks.png") no-repeat;
+  background-size: cover;
+}
+.celtics {
+  background: url("../imgs/celtics.png") no-repeat;
+  background-size: cover;
+}
+.nets {
+  background: url("../imgs/nets.png") no-repeat;
+  background-size: cover;
+}
+.hornets {
+  background: url("../imgs/hornets.png") no-repeat;
+  background-size: cover;
+}
+.bulls {
+  background: url("../imgs/bulls.png") no-repeat;
+  background-size: cover;
+}
+.cavaliers {
+  background: url("../imgs/cavaliers.png") no-repeat;
+  background-size: cover;
+}
+.mavericks {
+  background: url("../imgs/mavericks.png") no-repeat;
+  background-size: cover;
+}
+.nuggets {
+  background: url("../imgs/nuggets.png") no-repeat;
+  background-size: cover;
+}
+.pistons {
+  background: url("../imgs/pistons.png") no-repeat;
+  background-size: cover;
+}
+.warriors {
+  background: url("../imgs/warriors.png") no-repeat;
+  background-size: cover;
+}
+.rockets {
+  background: url("../imgs/rockets.png") no-repeat;
+  background-size: cover;
+}
+.pacers {
+  background: url("../imgs/pacers.png") no-repeat;
+  background-size: cover;
+}
+.clippers {
+  background: url("../imgs/clippers.png") no-repeat;
+  background-size: cover;
+}
+.lakers {
+  background: url("../imgs/lakers.png") no-repeat;
+  background-size: cover;
+}
+.grizzlies {
+  background: url("../imgs/grizzlies.png") no-repeat;
+  background-size: cover;
+}
+.heat {
+  background: url("../imgs/heat.png") no-repeat;
+  background-size: cover;
+}
+.bucks {
+  background: url("../imgs/bucks.png") no-repeat;
+  background-size: cover;
+}
+.timberwolves {
+  background: url("../imgs/timberwolves.png") no-repeat;
+  background-size: cover;
+}
+.pelicans {
+  background: url("../imgs/pelicans.png") no-repeat;
+  background-size: cover;
+}
+.knicks {
+  background: url("../imgs/knicks.png") no-repeat;
+  background-size: cover;
+}
+.thunder {
+  background: url("../imgs/thunder.png") no-repeat;
+  background-size: cover;
+}
+.magic {
+  background: url("../imgs/magic.png") no-repeat;
+  background-size: cover;
+}
+.sixers {
+  background: url("../imgs/sixers.png") no-repeat;
+  background-size: cover;
+}
+.suns {
+  background: url("../imgs/suns.png") no-repeat;
+  background-size: cover;
+}
+.blazers {
+  background: url("../imgs/trailblazers.png") no-repeat;
+  background-size: cover;
+}
+.kings {
+  background: url("../imgs/kings.png") no-repeat;
+  background-size: cover;
+}
+.spurs {
+  background: url("../imgs/spurs.png") no-repeat;
+  background-size: cover;
+}
+.raptors {
+  background: url("../imgs/raptors.png") no-repeat;
+  background-size: cover;
+}
+.jazz {
+  background: url("../imgs/jazz.png") no-repeat;
+  background-size: cover;
+}
+.wizards {
+  background: url("../imgs/wizards.png") no-repeat;
+  background-size: cover;
+}

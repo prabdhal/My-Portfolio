@@ -219,17 +219,6 @@ button {
 @import "Game";
 @import "Weather";
 
-@media screen and (max-width: 1800px) {
-  .proj-hs {
-    padding: 0 20px;
-
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
-    padding-bottom: calc(0.75 * var(--gutter));
-    margin-bottom: calc(-0.25 * var(--gutter));
-  }
-}
-
 @media screen and (max-width: 1100px) {
   .nav-links {
     width: 100%;

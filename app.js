@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const weatherRoute = require("./Routes/weatherRoute");
 const gameRoute = require("./Routes/gameRoute");
 const todoListRoute = require("./Routes/todolistRoute");
+const basketballRoute = require("./Routes/basketballRoute");
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.get("/home", (req, res) => {
 app.use("/", gameRoute);
 app.use("/", weatherRoute);
 app.use("/", todoListRoute);
+app.use("/", basketballRoute);
 
 app.get("/download", (req, res) => {
   const file = `${__dirname}/upload/PrabdeepDhaliwalsResume.pdf`;

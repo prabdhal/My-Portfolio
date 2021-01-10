@@ -4,8 +4,8 @@ if (process.env.NODE_ENV !== "production") {
 
 const router = require("express").Router();
 
-router.get("/game", async (req, res) => {
-  res.render("tdgame");
+router.get("/basketballapp", async (req, res) => {
+  res.render("basketballapp");
 });
 
 module.exports = router;

@@ -27,6 +27,7 @@
           <li class="nav-list"><a href="/weatherapp" class="drop-link">Weather App</a></li>
           <li class="nav-list"><a href="https://top-kicks-website.herokuapp.com/home" class="drop-link">Top Kicks Website</a></li>
           <li class="nav-list"><a href="/todolist" class="drop-link">Todo List App</a></li>
+          <li class="nav-list"><a href="/basketballapp" class="drop-link">Basketball Score App</a></li>
         </ul>
         <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -114,38 +115,35 @@
           </div>
         </div>
         <div class="project-item">
-          <h3 class="project-title vm-10">Weather App</h3>
+          <h3 class="project-title vm-10">Basketball Score App</h3>
           <div>
-            <div class="project-image2"></div>
+            <div class="project-image5"></div>
           </div>
           <article class="description-container">
             <figcaption class="vp-10">
-              A weather app created using REST API from openweathermap.org. You can search for a city 
-              and the app will return the weather information of that city.<br><br>
+              A basketball score app where users can view and compare NBA player stats. Users may also search for scheduled NBA games and view match up.<br><br>
               Features:
-              <p>- Integrated Google maps API to fetch latitude and longitude coordinates</p>
-              <p>- Fetched endpoint data with from APIs with axios</p>
-              <p>- Converted JSON data from the weather API into a readible format</p>
+              <p>- Integrated an open source API to fetch player, team and game data</p>
+              <p>- Implemented useRef, useState and useEffect for getting and rendering data</p>
+              <p>- Created functionality to sort, store and remove players from an array</p>
             </figcaption>
             <figcaption class="project-label">
               <h3 class="mb-10">Languages / Libraries / Softwares</h3>
               <div class="project-skills">
                 <h5>HTML</h5>
-                <h5>CSS</h5>
+                <h5>Sass</h5>
                 <h5>JavaScript</h5>
-                <h5>Node.js</h5>
-                <h5>Express</h5>
-                <h5>Dotenv</h5>
+                <h5>React</h5>
                 <h5>Axios</h5>
               </div>
             </figcaption>
           </article>
           <div class="mt-auto">
-            <a href="/weatherapp" class="anchor-btn vm-auto">View Project</a>
+            <a href="/basketballapp" class="anchor-btn vm-auto">View Project</a>
           </div>
         </div>
         <div class="project-item">
-          <h3 class="project-title vm-10">Top Kicks Mock Website</h3>
+          <h3 class="project-title vm-10">Top Kicks Website</h3>
           <div>
             <div class="project-image3"></div>
           </div>
@@ -181,17 +179,48 @@
           </div>
         </div>
         <div class="project-item">
+          <h3 class="project-title vm-10">Weather App</h3>
+          <div>
+            <div class="project-image2"></div>
+          </div>
+          <article class="description-container">
+            <figcaption class="vp-10">
+              A weather app created using REST API from openweathermap.org. You can search for a city 
+              and the app will return the weather information of that city.<br><br>
+              Features:
+              <p>- Integrated Google maps API to fetch latitude and longitude coordinates</p>
+              <p>- Fetched endpoint data from APIs with axios</p>
+              <p>- Converted JSON data from the weather API into a readible format</p>
+            </figcaption>
+            <figcaption class="project-label">
+              <h3 class="mb-10">Languages / Libraries / Softwares</h3>
+              <div class="project-skills">
+                <h5>HTML</h5>
+                <h5>CSS</h5>
+                <h5>JavaScript</h5>
+                <h5>Node.js</h5>
+                <h5>Express</h5>
+                <h5>Dotenv</h5>
+                <h5>Axios</h5>
+              </div>
+            </figcaption>
+          </article>
+          <div class="mt-auto">
+            <a href="/weatherapp" class="anchor-btn vm-auto">View Project</a>
+          </div>
+        </div>
+        <div class="project-item">
           <h3 class="project-title vm-10">Todo List App</h3>
           <div>
             <div class="project-image4"></div>
           </div>
           <article class="description-container">
             <figcaption class="vp-10">
-              A todo list app created using react.js where users can create several lists and add tasks to each of their todo lists.<br><br>
+              A todo list app where users can create several todo lists and add tasks to each of their todo lists.<br><br>
               Features:
+              <p>- Implemented local storage to save and load data</p>
+              <p>- Implemented create, delete and rename functionality with the use of map, find and filter functions</p>
               <p>- Created small single-purpose functions for easy code readability</p>
-              <p>- Created several stateless function components for code reusability</p>
-              <p>- Added create, delete and rename functionality with the use of map, find and filter functions</p>
             </figcaption>
             <figcaption class="project-label">
               <h3 class="mb-10">Languages / Libraries / Softwares</h3>
@@ -209,6 +238,8 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
   </section>
 
   <%- include('./_footer.ejs'); %> 

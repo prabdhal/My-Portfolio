@@ -1,0 +1,67 @@
+.player-information-container {
+  text-align: left;
+  padding: 5px 10px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  background-color: var(--primaryColorNBA);
+  color: var(--secondaryColorNBA);
+}
+
+.player-border {
+  padding: 5px;
+}
+
+.player-name-text {
+  font-size: var(--mediumFontNBA);
+}
+
+.player-information-text {
+  font-size: var(--regularFontNBA);
+}
+
+.basic-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--smallFontNBA);
+  margin: auto;
+  color: white;
+  background-color: var(--secondaryColorNBA);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 2px double black;
+  overflow-x: scroll;
+}
+
+.stat-container {
+  padding: 15px 10px;
+  margin: auto;
+  font-weight: 600;
+}
+
+.basic-averages-header {
+  text-align: center;
+  font-size: var(--smallFontNBA);
+  color: var(--complementaryColorNBA);
+  margin: auto;
+}
+
+::-webkit-scrollbar {
+  height: 7px; /* height of horizontal scrollbar ← You're missing this */
+  width: 5px;
+  border: 1px solid var(--secondaryColorNBA);
+  background-color: var(--secondaryColorNBA);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--primaryColorNBA);
+  border: 1px solid var(--primaryColorNBA);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  border: 1px solid var(--secondaryColorNBA);
+  background-color: var(--secondaryColorNBA);
+  border-radius: 10px;
+}

@@ -11,7 +11,7 @@
   display: grid;
   padding: var(--gutter) 0;
   grid-gap: var(--gutter) 0;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   align-content: start;
   justify-content: center;
   margin: auto;
@@ -21,9 +21,15 @@
   width: 100%;
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(4, 400px);
+  grid-template-columns: repeat(5, 400px);
   grid-template-rows: 810px;
   list-style: none;
+  padding: 0 20px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(0.75 * var(--gutter));
+  margin-bottom: calc(-0.25 * var(--gutter));
 }
 
 .projects-container > * {
@@ -84,6 +90,14 @@
   width: 350px;
   background-color: white;
   background: url(../imgs/todo-list-icon.PNG) no-repeat;
+  background-size: cover;
+}
+
+.project-image5 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/basketball-score-app-icon.PNG) no-repeat;
   background-size: cover;
 }
 
