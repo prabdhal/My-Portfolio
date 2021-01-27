@@ -11,7 +11,7 @@
   display: grid;
   padding: var(--gutter) 0;
   grid-gap: var(--gutter) 0;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   align-content: start;
   justify-content: center;
   margin: auto;
@@ -21,7 +21,7 @@
   width: 100%;
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(5, 400px);
+  grid-template-columns: repeat(6, 400px);
   grid-template-rows: 810px;
   list-style: none;
   padding: 0 20px;
@@ -98,6 +98,14 @@
   width: 350px;
   background-color: white;
   background: url(../imgs/basketball-score-app-icon.PNG) no-repeat;
+  background-size: cover;
+}
+
+.project-image6 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/bLogger-website-icon.png) no-repeat;
   background-size: cover;
 }
 

@@ -610,8 +610,8 @@ h4.hero-secondary-header::first-letter {
   display: grid;
   padding: var(--gutter) 0;
   grid-gap: var(--gutter) 0;
-  -ms-grid-columns: (auto)[5];
-      grid-template-columns: repeat(5, auto);
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
   -ms-flex-line-pack: start;
       align-content: start;
   -webkit-box-pack: center;
@@ -625,8 +625,8 @@ h4.hero-secondary-header::first-letter {
   display: -ms-grid;
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  -ms-grid-columns: (400px)[5];
-      grid-template-columns: repeat(5, 400px);
+  -ms-grid-columns: (400px)[6];
+      grid-template-columns: repeat(6, 400px);
   -ms-grid-rows: 810px;
       grid-template-rows: 810px;
   list-style: none;
@@ -715,6 +715,14 @@ h4.hero-secondary-header::first-letter {
   width: 350px;
   background-color: white;
   background: url(../imgs/basketball-score-app-icon.PNG) no-repeat;
+  background-size: cover;
+}
+
+.project-image6 {
+  height: 223px;
+  width: 350px;
+  background-color: white;
+  background: url(../imgs/bLogger-website-icon.png) no-repeat;
   background-size: cover;
 }
 
