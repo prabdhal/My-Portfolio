@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-  blogRef: {
+  pageId: {
     type: String,
     required: true,
   },
-  author: {
+  user: {
     type: String,
     required: true,
   },

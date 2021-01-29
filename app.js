@@ -40,10 +40,10 @@ app.get('/home', (req, res) => {
   res.render('index');
 });
 
-app.use('/', gameRoute);
-app.use('/', weatherRoute);
-app.use('/', todoListRoute);
-app.use('/', basketballRoute);
+app.use('/tower-defence-3d-enemy-wave', gameRoute);
+app.use('/weather-app', weatherRoute);
+app.use('/todo-list-app', todoListRoute);
+app.use('/basketball-score-app', basketballRoute);
 
 app.get('/download', (req, res) => {
   const file = `${__dirname}/upload/PrabdeepDhaliwalsResume.pdf`;

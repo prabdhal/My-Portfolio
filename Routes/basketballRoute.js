@@ -1,11 +1,11 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
 }
 
-const router = require("express").Router();
+const router = require('express').Router();
 
-router.get("/basketballapp", async (req, res) => {
-  res.render("basketballapp");
+router.get('/', async (req, res) => {
+  res.render('basketballapp');
 });
 
 module.exports = router;
