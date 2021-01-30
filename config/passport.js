@@ -6,7 +6,7 @@ module.exports = (passport) => {
   passport.use(
     new LocalStrategy({ email: 'email' }, async (email, password, done) => {
       // Match User
-      const email = await User.findOne({ email });
+      const user = await User.findOne({ email });
       if (!user)
         return done(null, false, { message: 'email is not registered' });
 
