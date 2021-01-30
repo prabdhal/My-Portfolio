@@ -5,26 +5,43 @@ if (process.env.NODE_ENV !== 'production') {
 const router = require('express').Router();
 const Comment = require('../models/comment');
 const Reply = require('../models/reply');
+const User = require('../models/user');
 
 router.get('/', async (req, res) => {
-  res.render('tdgame');
+  const allComments = await Comment.find();
+  const allReplies = await Reply.find();
+
+  let comments = [];
+  let replies = [];
+
+  for (i = 0; i < allComments.length; i++) {
+    if (allComments[i].pageId == 'TD3D') {
+      comments.push(allComments[i]);
+    }
+  }
+  for (i = 0; i < allReplies.length; i++) {
+    if (allReplies[i].pageId == 'TD3D') {
+      replies.push(allReplies[i]);
+    }
+  }
+  res.render('tdgame', { comments, replies, user: req.user });
 });
 
 router.post('/comment', async (req, res) => {
   const { pageId, user, comment } = req.body;
 
-  const comment = new Comment({
+  const userComment = new Comment({
     pageId: 'TD3D',
     user: req.user.displayName,
     comment,
   });
 
-  const saveComment = await comment.save();
+  const saveComment = await userComment.save();
   if (saveComment) console.log('Comment Saved!');
   else console.log(err);
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/comment/:id', async (req, res) => {
   const { comment } = req.body;
 
   const userComment = await Comment.findById(req.params.id);

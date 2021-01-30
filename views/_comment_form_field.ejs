@@ -1,8 +1,7 @@
-
-<label class="comments-label" for="name">Name:</label>
-<input required class="comments-input" type="text" 
-id="name" name="name" placeholder="name">
-<label class="comments-label" for="comments">Comments:</label>
-<textarea required class="comments-textarea" id="comments" 
-name="comments" placeholder="comment"></textarea>
-<button class="anchor-btn mt-20" type="submit">Submit</button>
+<!-- <label>Add A Comment</label> -->
+<input required type="text" name="comment" id="comment" placeholder="Add a comment..."></input>
+<% if (!user) { %>
+<a class="a-add-comment-btn" href="/account/login">Add Comment</a>
+<% } else { %>
+<button class="add-comment-btn" type="submit">Add Comment</button>
+<% } %>

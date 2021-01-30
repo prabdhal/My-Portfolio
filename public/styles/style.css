@@ -23,7 +23,7 @@ html {
 body {
   background: var(--primaryColor);
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -35,7 +35,7 @@ p {
 }
 
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -1112,6 +1112,28 @@ input.search-box[type="text"] {
     -ms-grid-columns: (150px)[1];
         grid-template-columns: repeat(1, 150px);
   }
+}
+
+.a-add-comment-btn {
+  width: 100%;
+  max-width: 200px;
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+}
+
+.add-comment-btn {
+  width: 100%;
+  max-width: 200px;
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
 }
 
 @media screen and (max-width: 1100px) {

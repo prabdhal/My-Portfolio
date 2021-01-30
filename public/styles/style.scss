@@ -16,7 +16,7 @@ html {
 body {
   background: var(--primaryColor);
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +28,7 @@ p {
 }
 
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -210,14 +210,15 @@ button {
   text-decoration: none;
 }
 
-@import "Nav";
-@import "Hero";
-@import "About";
-@import "Skills";
-@import "Projects";
-@import "Footer";
-@import "Game";
-@import "Weather";
+@import 'Nav';
+@import 'Hero';
+@import 'About';
+@import 'Skills';
+@import 'Projects';
+@import 'Footer';
+@import 'Game';
+@import 'Weather';
+@import 'Comments';
 
 @media screen and (max-width: 1100px) {
   .nav-links {
