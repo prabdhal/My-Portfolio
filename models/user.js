@@ -5,6 +5,7 @@ const userSchema = new Schema(
   {
     displayName: {
       type: String,
+      unique: true,
       required: true,
     },
     email: {
@@ -18,6 +19,10 @@ const userSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+    },
+    active: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true }
