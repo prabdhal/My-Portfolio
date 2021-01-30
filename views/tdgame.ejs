@@ -14,30 +14,7 @@
   </head>
 <body>
   <header>
-    <nav>
-      <div class="logo-container">
-        <a href="/home" class="logo-text secondary-color">Portfolio</a>
-      </div>
-      <ul class="nav-links">
-        <li class="nav-list"><a href="/home#home" class="nav-link">Home</a></li>
-        <li class="nav-list"><a href="/home#about" class="nav-link">About</a></li>
-        <li class="nav-list"><a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
-        <ul class="dropdown-content" data-projects-drop-down>
-          <li class="nav-list"><a href="/tower-defence-3d-enemy-wave" class="drop-link">Tower Defence 3D - Enemy Wave</a></li>
-          <li class="nav-list"><a href="/basketball-score-app" class="drop-link">Basketball Score App</a></li>
-          <li class="nav-list"><a href="https://blogposter-website.herokuapp.com/bLogPoster" class="drop-link">bLogPoster</a></li>
-          <li class="nav-list"><a href="https://top-kicks-website.herokuapp.com/home" class="drop-link">Top Kicks Website</a></li>
-          <li class="nav-list"><a href="/weather-app" class="drop-link">Weather App</a></li>
-          <li class="nav-list"><a href="/todo-list-app" class="drop-link">Todo List App</a></li>
-        </ul>
-        <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="menu-btn">
-        <div class="line secondary-bg-color"></div>
-        <div class="line secondary-bg-color"></div>
-        <div class="line secondary-bg-color"></div>
-      </div>
-    </nav>
+    <%- include('./_nav.ejs');
   </header>
 
   <section class="vp-100 game" id="game">
