@@ -14,28 +14,23 @@
   </head>
 <body>
   <header>
-    <nav>
-      <div class="logo-container">
-        <a href="/home" class="logo-text secondary-color">Portfolio</a>
-      </div>
-      <ul class="nav-links">
-        <li class="nav-list"><a href="/home#home" class="nav-link">Home</a></li>
-        <li class="nav-list"><a href="/home#about" class="nav-link">About</a></li>
-        <li class="nav-list"><a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
-        <%- include('./_navDropdown.ejs');
-        <li class="nav-list"><a href="/home#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="menu-btn">
-        <div class="line secondary-bg-color"></div>
-        <div class="line secondary-bg-color"></div>
-        <div class="line secondary-bg-color"></div>
-      </div>
-    </nav>
+    <%- include('./_nav.ejs'); %>
   </header>
   
   </section>
 
+  <form class="basic-form" action="/login" method="POST">
+    <h3>Sign In</h3>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="email">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="password">
+    <a href="/account-recovery">Forgot Username or Password</a>
+    <button type="submit">Sign In</button>
+  </form>
+
   <%- include('./_footer.ejs'); %> 
+  </section>
   
 </body>
 </html>

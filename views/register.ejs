@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script rel="text/javascript" src="/responsive.js" defer></script>
+    <title>My Portfolio</title>
+  </head>
+<body>
+  <header>
+    <%- include('./_nav.ejs'); %>
+  </header>
+  
+  </section>
+
+  <form class="basic-form" action="/login" method="POST">
+    <h3>Sign Up</h3>
+    <label>Display Name</label>
+    <input type="text" name="displayName" placeholder="Enter your display name here...">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Email">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="password">
+    <label>Confirm Password</label>
+    <input type="password" name="confirmPassword" placeholder="confirmPassword">
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <%- include('./_footer.ejs'); %> 
+  </section>
+  
+</body>
+</html>
