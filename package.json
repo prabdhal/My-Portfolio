@@ -4,6 +4,7 @@
   "description": "My Portfolio",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "author": "Prabdeep Dhaliwal",
