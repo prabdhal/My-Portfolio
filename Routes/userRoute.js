@@ -280,7 +280,16 @@ function mailVerificationCode(user, verify, email) {
     cc: 'hello',
     subject: `Email verification for Prab's Portfolio`,
     text: ``,
-    html: `<h4>Dear ${user.displayName},</h4><br/><p>To validate your account, click the link below:</p> <p>${link}</p><br/><p>Your account information:</p> <p>Display Name: ${user.username}</p><br/><p>Should you have any questions or concerns, please contact me at prab.dhaliwal95@gmail.com or leave a comment on my tutorial blog on bLogPoster and I will get back to you.</p><br/><p>Sincerely,</p><p>Prabdeep Dhaliwal</p><p>https://blogposter-website.herokuapp.com/bLogPoster/view/how-to-use-blogposter</p>`,
+    html: `<h4>Dear ${user.displayName},</h4>
+    <br/>
+    <p>To validate your account, click the link below:</p> 
+    <p>${link}</p><br/><p>Your account information:</p> 
+    <p>Display Name: ${user.username}</p>
+    <br/>
+    <p>Should you have any questions or concerns, please contact me at 
+    prab.dhaliwal95@gmail.com or leave a comment on my tutorial blog on 
+    bLogPoster and I will get back to you.</p><br/><p>Sincerely,</p>
+    <p>Prabdeep Dhaliwal</p><p>https://blogposter-website.herokuapp.com/bLogPoster/view/how-to-use-blogposter</p>`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -299,7 +308,19 @@ function mailResetPassword(user, verify, email) {
     to: `${email}`,
     subject: `Email verification for Prab's Portfolio`,
     text: ``,
-    html: `<h4>Dear ${user.displayName},</h4><br/><p>To reset your password to your bLogPoster account, click the link below:</p> <p>${link}</p><br/><p>Your account information:</p> <p>Username: ${user.username}</p><br/><p>Should you have any questions or concerns, please contact me at prab.dhaliwal95@gmail.com or leave a comment on my tutorial blog on bLogPoster and I will get back to you.</p><br/><p>Sincerely,</p><p>Prabdeep Dhaliwal</p><p>https://blogposter-website.herokuapp.com/bLogPoster/view/how-to-use-blogposter</p>`,
+    html: `<h4>Dear ${user.displayName},</h4>
+    <br/>
+    <p>To reset your password to your bLogPoster account, click the link below:</p> 
+    <p>${link}</p>
+    <br/>
+    <p>Your account information:</p>
+    <p>Username: ${user.username}</p>
+    <br/>
+    <p>Should you have any questions or concerns, please contact me at prab.dhaliwal95@gmail.com 
+    or leave a comment on my tutorial blog on bLogPoster and I will get back to you.</p>
+    <br/>
+    <p>Sincerely,</p><p>Prabdeep Dhaliwal</p>
+    <p>https://blogposter-website.herokuapp.com/bLogPoster/view/how-to-use-blogposter</p>`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
