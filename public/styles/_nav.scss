@@ -2,7 +2,7 @@ header {
   width: 100%;
   display: flex;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 1;
   transition: all 300ms ease;
 }
@@ -27,6 +27,7 @@ nav {
 
 .nav-links {
   display: flex;
+  justify-content: space-evenly;
   list-style: none;
   margin: auto 0;
 }
@@ -46,6 +47,10 @@ nav {
   color: white;
 }
 
+#nav-link-btn {
+  display: none;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -56,9 +61,7 @@ nav {
   padding: 20px;
   background-color: var(--secondaryColor);
   border: 2px solid var(--complementaryColor);
-  visibility: hidden;
   opacity: 0;
-  transition: all 200ms ease;
 }
 .dropdown-content-alt {
   display: none;
@@ -70,23 +73,31 @@ nav {
   padding: 20px;
   background-color: var(--complementaryColor);
   border: 2px solid var(--secondaryColor);
-  visibility: hidden;
   opacity: 0;
-  transition: all 200ms ease;
 }
 
 .open-dropdown {
   display: flex;
-  visibility: visible;
-  opacity: 1;
+  animation: Fade 500ms forwards;
 }
 
-li, .drop-link {
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+li,
+.drop-link {
   color: white;
   text-decoration: none;
   margin: 20px 0;
 }
-li, .drop-link-alt {
+li,
+.drop-link-alt {
   color: white;
   text-decoration: none;
   margin: 20px 0;

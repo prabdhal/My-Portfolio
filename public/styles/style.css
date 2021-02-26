@@ -288,6 +288,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
   margin: auto 0;
 }
@@ -308,6 +311,10 @@ nav {
   color: white;
 }
 
+#nav-link-btn {
+  display: none;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -321,10 +328,7 @@ nav {
   padding: 20px;
   background-color: var(--secondaryColor);
   border: 2px solid var(--complementaryColor);
-  visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 
 .dropdown-content-alt {
@@ -340,27 +344,44 @@ nav {
   padding: 20px;
   background-color: var(--complementaryColor);
   border: 2px solid var(--secondaryColor);
-  visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 
 .open-dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  visibility: visible;
-  opacity: 1;
+  -webkit-animation: Fade 500ms forwards;
+          animation: Fade 500ms forwards;
 }
 
-li, .drop-link {
+@-webkit-keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+li,
+.drop-link {
   color: white;
   text-decoration: none;
   margin: 20px 0;
 }
 
-li, .drop-link-alt {
+li,
+.drop-link-alt {
   color: white;
   text-decoration: none;
   margin: 20px 0;
@@ -510,14 +531,6 @@ h4.hero-secondary-header::first-letter {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--complementaryColor);
-}
-
-.about-img {
-  height: 350px;
-  width: 250px;
-  background-color: white;
-  background: url(../imgs/Prab-Img.png) no-repeat;
-  background-size: cover;
 }
 
 .about-section {
@@ -672,58 +685,6 @@ h4.hero-secondary-header::first-letter {
   font-size: var(--smallerFont);
   color: var(--secondaryColor);
   text-align: center;
-}
-
-.project-image1 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/tower-defense-3d-icon.png) no-repeat;
-  background-size: cover;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-}
-
-.project-image2 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/weather-app-icon.png) no-repeat;
-  background-size: cover;
-}
-
-.project-image3 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/top-kicks-icon.png) no-repeat;
-  background-size: cover;
-}
-
-.project-image4 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/todo-list-icon.PNG) no-repeat;
-  background-size: cover;
-}
-
-.project-image5 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/basketball-score-app-icon.PNG) no-repeat;
-  background-size: cover;
-}
-
-.project-image6 {
-  height: 223px;
-  width: 350px;
-  background-color: white;
-  background: url(../imgs/blogposter-icon.PNG) no-repeat;
-  background-size: cover;
 }
 
 .description-container {
@@ -1197,6 +1158,10 @@ input.search-box[type="text"] {
     opacity: 1;
     top: 0%;
   }
+  #nav-list-dropdown {
+    margin-left: 110px;
+    cursor: pointer;
+  }
   .open::-webkit-scrollbar {
     display: none;
   }
@@ -1224,7 +1189,16 @@ input.search-box[type="text"] {
   }
   .nav-link,
   .nav-link-alt {
-    padding: 50px 0;
+    padding: 60px 0;
+  }
+  #nav-link-btn {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin-left: 70px;
   }
   .menu-btn {
     display: block;

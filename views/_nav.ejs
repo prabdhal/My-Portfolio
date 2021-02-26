@@ -5,7 +5,10 @@
   <ul class="nav-links">
     <li class="nav-list"><a href="/home#home" class="nav-link">Home</a></li>
     <li class="nav-list"><a href="/home#about" class="nav-link">About</a></li>
-    <li class="nav-list"><a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a></li>
+    <li class="nav-list" id="nav-list-dropdown" data-projects-drop-down-button>
+      <a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a>
+      <button id="nav-link-btn">&#x25BC;</button>
+    </li>
     <%- include('./_navDropdown.ejs') %>
     <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
