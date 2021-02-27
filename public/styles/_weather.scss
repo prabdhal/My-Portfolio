@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   align-content: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif, serif;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -46,7 +46,7 @@ input.search-box {
   border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-input.search-box[type="text"] {
+input.search-box[type='text'] {
   font-size: 1rem;
 }
 
@@ -114,39 +114,39 @@ input.search-box[type="text"] {
 
 // ################# BACKGROUNDS #############################
 .sunny {
-  background: url("/imgs/Sunny.png") no-repeat;
+  background: url('/imgs/Sunny.png') no-repeat;
   background-size: cover;
 }
 .rain {
-  background: url("/imgs/Rainy.jpg") no-repeat;
+  background: url('/imgs/Rainy.jpg') no-repeat;
   background-size: cover;
 }
 .clouds {
-  background: url("/imgs/Cloudy.jpg") no-repeat;
+  background: url('/imgs/Cloudy.jpg') no-repeat;
   background-size: cover;
 }
 .snow {
-  background: url("/imgs/Snowy.jpg") no-repeat;
+  background: url('/imgs/Snowy.jpg') no-repeat;
   background-size: cover;
 }
 .clear {
-  background: url("/imgs/Clear.jpg") no-repeat;
+  background: url('/imgs/Clear.jpg') no-repeat;
   background-size: cover;
 }
 .misty {
-  background: url("/imgs/Misty.png") no-repeat;
+  background: url('/imgs/Misty.png') no-repeat;
   background-size: cover;
 }
 .fog {
-  background: url("/imgs/Fog.webp") no-repeat;
+  background: url('/imgs/Fog.webp') no-repeat;
   background-size: cover;
 }
 .haze {
-  background: url("/imgs/Haze.jpg") no-repeat;
+  background: url('/imgs/Haze.jpg') no-repeat;
   background-size: cover;
 }
 .smoke {
-  background: url("/imgs/Smoke.jpg") no-repeat;
+  background: url('/imgs/Smoke.jpg') no-repeat;
   background-size: cover;
 }
 .default {

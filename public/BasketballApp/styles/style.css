@@ -28,7 +28,7 @@
   background-color: var(--complementaryColorNBA);
   color: var(--secondaryColorNBA);
   padding: 0 0 4% 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif, serif;
 }
 
 .main-bg {
@@ -71,7 +71,7 @@ input.nba-input {
   padding: 5px;
 }
 
-input.nba-input[type="text"] {
+input.nba-input[type='text'] {
   font-size: 1rem;
 }
 
@@ -81,7 +81,7 @@ input.nba-input[type="text"] {
 
 .nba-btn {
   padding: 6px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif, serif;
 }
 
 .row {
@@ -485,5 +485,9 @@ div.nba-header {
 .wizards {
   background: url("../imgs/wizards.png") no-repeat;
   background-size: cover;
+}
+
+.invis {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

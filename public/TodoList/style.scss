@@ -15,15 +15,15 @@ body::-webkit-scrollbar {
 
 body {
   background: var(--primaryColor);
-  font-family: "Itim", cursive;
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
 button {
-  font-family: "Itim", cursive;
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
-input[type="text"] {
-  font-family: "Itim", cursive;
+input[type='text'] {
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
 .white-color {
@@ -214,7 +214,7 @@ main {
 }
 
 footer {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif, serif;
   background-color: var(--secondaryColor);
   color: var(--primaryColor);
 }
@@ -320,9 +320,9 @@ footer {
   text-decoration: none;
 }
 
-@import "Navbar";
-@import "List";
-@import "Task";
+@import 'Navbar';
+@import 'List';
+@import 'Task';
 
 .hide {
   display: none;
@@ -369,7 +369,7 @@ footer {
     text-align: center;
     background-color: var(--secondaryColor);
     z-index: 99;
-    transition: all 500ms ease;
+    transition: all 500ms ease-in-out;
   }
 
   .dropdown-content,
@@ -381,14 +381,13 @@ footer {
 
   .drop-link:hover,
   .drop-link-alt:hover {
-    color: var(--secondaryColor);
+    animation: navHover 200ms ease-in-out forwards;
   }
 
   .open {
     display: flex;
     top: 0;
     padding-top: 30px;
-    overflow-y: scroll;
   }
   .nav-links li.nav-list {
     position: relative;
@@ -405,7 +404,7 @@ footer {
     transition: all 0.5s ease-in;
   }
   .nav-links li:nth-child(4) {
-    transition: all 2s ease-in;
+    transition: all 0.4s ease-in;
   }
   li.nav-list.fade {
     opacity: 1;
@@ -417,30 +416,45 @@ footer {
   }
 
   li.nav-list,
-  .nav-link {
-    margin: 50px 0;
-    font-size: 2rem;
-  }
-  li.nav-list,
-  .nav-link:hover {
-    color: var(--primaryColor);
-    animation: none;
-  }
-
-  li.nav-list,
-  .nav-link-alt {
-    margin: 50px 0;
-    font-size: 2rem;
-  }
-  li.nav-list,
-  .nav-link-alt:hover {
-    color: var(--primaryColor);
-    animation: none;
-  }
-
   .nav-link,
   .nav-link-alt {
-    padding: 50px 0;
+    margin: 50px 0;
+    font-size: 2rem;
+  }
+  .nav-link,
+  .nav-link-alt {
+    padding: 60px 0;
+  }
+  li.nav-list,
+  .nav-link:hover,
+  .nav-link-alt:hover {
+    color: var(--primaryColor);
+    animation: navLinkColorFade 200ms forwards;
+  }
+
+  @keyframes navLinkColorFade {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+
+  #navListDropdown {
+    cursor: pointer;
+    margin-left: 110px;
+  }
+
+  #navLinkBtn {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin-left: 70px;
   }
 
   .menu-btn {

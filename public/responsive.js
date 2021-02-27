@@ -1,7 +1,5 @@
 //const divMargin = document.querySelector('div.mb-20');
-const removeHeroHeaderMargin = document.getElementById(
-  'removeHeroHeaderMargin'
-);
+let removeHeroHeaderMargin = document.getElementById('removeHeroHeaderMargin');
 const navBar = document.querySelector('header');
 const logoText = document.querySelector('.logo-text');
 const navLinks = document.querySelector('.nav-links');
@@ -18,6 +16,7 @@ const dataProjectsNavLink = document.querySelector('[data-projects-nav-link]');
 const dataProjectsDropDown = document.querySelector(
   '[data-projects-drop-down]'
 );
+const dataEntireNavbar = document.querySelector('[data-entire-navbar]');
 let x = window.matchMedia('(max-width: 1100px)');
 
 mediaQuery(x);
@@ -25,9 +24,8 @@ x.addEventListener('change', mediaQuery);
 
 window.onscroll = function changeNavBarColor() {
   'use strict';
-  if (navLinks.classList.contains('open')) return;
 
-  // changes colors the navbar, logotext, navlink and menu button
+  // changes colors of the navbar, logotext, navlink and menu button
   // when user scrolls down from top
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     navBar.classList.add('secondary-bg-color');
@@ -122,7 +120,8 @@ navLink.forEach((link) => {
 // for better responsive fit at max width 1100px
 function mediaQuery(x) {
   if (x.matches) {
-    if (removeHeroHeaderMargin == null) return;
+    if (removeHeroHeaderMargin == null || removeHeroHeaderMargin == undefined)
+      return;
     removeHeroHeaderMargin.classList.remove('ml-100');
   } else {
     removeHeroHeaderMargin.classList.add('ml-100');
@@ -142,7 +141,6 @@ function openDropDown() {
 function closeDropDown() {
   dataProjectsDropDown.classList.remove('open-dropdown');
 }
-
 function toggleDropDown() {
   if (dataProjectsDropDown.classList.contains('open-dropdown')) {
     closeDropDown();

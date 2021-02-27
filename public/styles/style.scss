@@ -16,7 +16,7 @@ html {
 body {
   background: var(--primaryColor);
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif, serif;
 }
 
 body::-webkit-scrollbar {
@@ -98,6 +98,7 @@ button {
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
+  transition: background-color, color 200ms ease-in-out;
 }
 .anchor-btn:hover {
   background-color: var(--secondaryColor);
@@ -218,7 +219,6 @@ button {
 @import 'Footer';
 @import 'Game';
 @import 'Weather';
-@import 'Comments';
 
 @media screen and (max-width: 1100px) {
   .nav-links {
@@ -232,7 +232,7 @@ button {
     text-align: center;
     background-color: var(--secondaryColor);
     z-index: 99;
-    transition: all 500ms ease;
+    transition: all 500ms ease-in-out;
   }
 
   .dropdown-content,
@@ -244,14 +244,13 @@ button {
 
   .drop-link:hover,
   .drop-link-alt:hover {
-    color: var(--secondaryColor);
+    animation: navHover 200ms ease-in-out forwards;
   }
 
   .open {
     display: flex;
     top: 0;
     padding-top: 30px;
-    overflow-y: scroll;
   }
   .nav-links li.nav-list {
     position: relative;
@@ -268,7 +267,7 @@ button {
     transition: all 0.5s ease-in;
   }
   .nav-links li:nth-child(4) {
-    transition: all 2s ease-in;
+    transition: all 0.4s ease-in;
   }
   li.nav-list.fade {
     opacity: 1;
@@ -280,30 +279,29 @@ button {
   }
 
   li.nav-list,
-  .nav-link {
-    margin: 50px 0;
-    font-size: 2rem;
-  }
-  li.nav-list,
-  .nav-link:hover {
-    color: var(--primaryColor);
-    animation: none;
-  }
-
-  li.nav-list,
+  .nav-link,
   .nav-link-alt {
     margin: 50px 0;
     font-size: 2rem;
   }
-  li.nav-list,
-  .nav-link-alt:hover {
-    color: var(--primaryColor);
-    animation: none;
-  }
-
   .nav-link,
   .nav-link-alt {
     padding: 60px 0;
+  }
+  li.nav-list,
+  .nav-link:hover,
+  .nav-link-alt:hover {
+    color: var(--primaryColor);
+    animation: navLinkColorFade 200ms forwards;
+  }
+
+  @keyframes navLinkColorFade {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
   }
 
   #navListDropdown {
@@ -329,11 +327,11 @@ button {
 
   .hs {
     grid-template-columns: repeat(6, minmax(300px, 400px));
-    grid-template-rows: minmax(300px, 300px);
-    padding: 0 20px;
+    grid-template-rows: 300px;
+    padding: 0 10px;
 
     overflow-x: scroll;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
     padding-bottom: calc(0.75 * var(--gutter));
     margin-bottom: calc(-0.25 * var(--gutter));
   }
@@ -377,8 +375,7 @@ button {
     font-size: 70%;
   }
 
-  .hero-text-container,
-  .hero-img-container {
+  .hero-text-container {
     width: 100%;
   }
 

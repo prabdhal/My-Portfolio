@@ -21,15 +21,15 @@ body::-webkit-scrollbar {
 
 body {
   background: var(--primaryColor);
-  font-family: "Itim", cursive;
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
 button {
-  font-family: "Itim", cursive;
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
-input[type="text"] {
-  font-family: "Itim", cursive;
+input[type='text'] {
+  font-family: 'Itim', cursive, sans-serif, serif;
 }
 
 .white-color {
@@ -248,7 +248,7 @@ main {
 }
 
 footer {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif, serif;
   background-color: var(--secondaryColor);
   color: var(--primaryColor);
 }
@@ -379,18 +379,8 @@ footer {
   text-decoration: none;
 }
 
-.todo-nav {
-  min-height: 10vh;
-  padding: 20px 0 0 10px;
-  background-color: #964b00;
-}
-
-.todo-nav-title {
-  font-size: 2rem;
-}
-
 header {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif, serif;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,8 +389,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 nav {
@@ -429,6 +419,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
   margin: auto 0;
 }
@@ -449,6 +442,10 @@ nav {
   color: white;
 }
 
+#navLinkBtn {
+  display: none;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -462,10 +459,7 @@ nav {
   padding: 20px;
   background-color: var(--secondaryColor);
   border: 2px solid var(--complementaryColor);
-  visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 
 .dropdown-content-alt {
@@ -481,18 +475,33 @@ nav {
   padding: 20px;
   background-color: var(--complementaryColor);
   border: 2px solid var(--secondaryColor);
-  visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 
 .open-dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  visibility: visible;
-  opacity: 1;
+  -webkit-animation: Fade 500ms ease-in-out forwards;
+          animation: Fade 500ms ease-in-out forwards;
+}
+
+@-webkit-keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 li,
@@ -509,28 +518,16 @@ li,
   margin: 20px 0;
 }
 
-.nav-link:hover {
-  -webkit-animation: navHover 200ms ease;
-          animation: navHover 200ms ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: var(--secondaryColor);
-}
-
-.nav-link-alt:hover {
-  -webkit-animation: navHoverAlt 200ms ease;
-          animation: navHoverAlt 200ms ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: black;
-}
-
-.drop-link:hover {
-  color: black;
-}
-
+.nav-link:hover,
 .drop-link-alt:hover {
-  color: var(--secondaryColor);
+  -webkit-animation: navHover 200ms ease-in-out forwards;
+          animation: navHover 200ms ease-in-out forwards;
+}
+
+.nav-link-alt:hover,
+.drop-link:hover {
+  -webkit-animation: navHoverAlt 200ms ease-in-out forwards;
+          animation: navHoverAlt 200ms ease-in-out forwards;
 }
 
 .menu-btn {
@@ -821,8 +818,8 @@ li,
     text-align: center;
     background-color: var(--secondaryColor);
     z-index: 99;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
   }
   .dropdown-content,
   .dropdown-content-alt {
@@ -832,7 +829,8 @@ li,
   }
   .drop-link:hover,
   .drop-link-alt:hover {
-    color: var(--secondaryColor);
+    -webkit-animation: navHover 200ms ease-in-out forwards;
+            animation: navHover 200ms ease-in-out forwards;
   }
   .open {
     display: -webkit-box;
@@ -840,7 +838,6 @@ li,
     display: flex;
     top: 0;
     padding-top: 30px;
-    overflow-y: scroll;
   }
   .nav-links li.nav-list {
     position: relative;
@@ -860,8 +857,8 @@ li,
     transition: all 0.5s ease-in;
   }
   .nav-links li:nth-child(4) {
-    -webkit-transition: all 2s ease-in;
-    transition: all 2s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
   }
   li.nav-list.fade {
     opacity: 1;
@@ -871,30 +868,51 @@ li,
     display: none;
   }
   li.nav-list,
-  .nav-link {
-    margin: 50px 0;
-    font-size: 2rem;
-  }
-  li.nav-list,
-  .nav-link:hover {
-    color: var(--primaryColor);
-    -webkit-animation: none;
-            animation: none;
-  }
-  li.nav-list,
+  .nav-link,
   .nav-link-alt {
     margin: 50px 0;
     font-size: 2rem;
-  }
-  li.nav-list,
-  .nav-link-alt:hover {
-    color: var(--primaryColor);
-    -webkit-animation: none;
-            animation: none;
   }
   .nav-link,
   .nav-link-alt {
-    padding: 50px 0;
+    padding: 60px 0;
+  }
+  li.nav-list,
+  .nav-link:hover,
+  .nav-link-alt:hover {
+    color: var(--primaryColor);
+    -webkit-animation: navLinkColorFade 200ms forwards;
+            animation: navLinkColorFade 200ms forwards;
+  }
+  @-webkit-keyframes navLinkColorFade {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+  @keyframes navLinkColorFade {
+    0% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+  #navListDropdown {
+    cursor: pointer;
+    margin-left: 110px;
+  }
+  #navLinkBtn {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin-left: 70px;
   }
   .menu-btn {
     display: block;

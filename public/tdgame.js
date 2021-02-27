@@ -1,8 +1,4 @@
 const gameScreen = document.querySelector('.game-screen');
-const replyButton = document.querySelector('.reply-anchor-btn');
-const replyCommentBox = document.querySelector(
-  '[data-reply-comment-box-display]'
-);
 
 setInterval(AdjustGameScreenSize, 2000);
 
