@@ -60,10 +60,12 @@ window.onscroll = function changeNavBarColor() {
       link.classList.add('nav-link');
       link.classList.remove('nav-link-alt');
     });
-    menuLines.forEach((line) => {
-      line.classList.add('secondary-bg-color');
-      line.classList.remove('primary-bg-color');
-    });
+    if (!navLinks.classList.contains('open')) {
+      menuLines.forEach((line) => {
+        line.classList.add('secondary-bg-color');
+        line.classList.remove('primary-bg-color');
+      });
+    }
     dropContent.forEach((content) => {
       content.classList.add('dropdown-content');
       content.classList.remove('dropdown-content-alt');
@@ -78,6 +80,7 @@ window.onscroll = function changeNavBarColor() {
 // Toggles menu background and handles menu button colors
 // depending on the nav bars position
 menuBtn.addEventListener('click', () => {
+  dataProjectsDropDown.classList.remove('open-dropdown');
   navLinks.classList.toggle('open');
   navLinksListItem.forEach((listItem) => {
     listItem.classList.toggle('fade');
