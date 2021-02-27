@@ -826,6 +826,8 @@ li,
   .dropdown-content,
   .dropdown-content-alt {
     position: static;
+    height: 300px;
+    overflow-y: scroll;
     background-color: var(--complementaryColor);
     border: 2px solid var(--secondaryColor);
   }

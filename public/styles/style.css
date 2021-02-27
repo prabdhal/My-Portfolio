@@ -1075,6 +1075,8 @@ input.search-box[type='text'] {
   .dropdown-content,
   .dropdown-content-alt {
     position: static;
+    height: 300px;
+    overflow-y: scroll;
     background-color: var(--complementaryColor);
     border: 2px solid var(--secondaryColor);
   }
@@ -1122,7 +1124,6 @@ input.search-box[type='text'] {
   li.nav-list,
   .nav-link,
   .nav-link-alt {
-    margin: 50px 0;
     font-size: 2rem;
   }
   .nav-link,
