@@ -119,9 +119,9 @@ navLink.forEach((link) => {
 // removes margin-left styling from hero div and text
 // for better responsive fit at max width 1100px
 function mediaQuery(x) {
+  if (removeHeroHeaderMargin == null || removeHeroHeaderMargin == undefined)
+    return;
   if (x.matches) {
-    if (removeHeroHeaderMargin == null || removeHeroHeaderMargin == undefined)
-      return;
     removeHeroHeaderMargin.classList.remove('ml-100');
   } else {
     removeHeroHeaderMargin.classList.add('ml-100');
