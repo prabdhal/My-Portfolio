@@ -7,14 +7,16 @@
 }
 
 .hero-text-container {
-  position: relative;
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto 0;
+  word-wrap: break-word;
 }
 
 .hero-header {
+  width: 100%;
+  display: inline-block;
   font-size: var(--largeFont);
   font-weight: 900;
 }
@@ -30,19 +32,11 @@ h4.hero-secondary-header::first-letter {
   color: var(--secondaryColor);
 }
 
-.hero-img-container {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
+.name-container {
+  margin-left: 100px;
+  margin-bottom: 20px;
 }
 
-.hero-img {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  bottom: 40px;
-  //background: url(../imgs/hero-image.jpg) no-repeat;
-  background-size: cover;
-  z-index: -2;
+.name-container:first-child {
+  margin-left: 100px;
 }

@@ -21,9 +21,9 @@
       <ul class="nav-links">
         <li class="nav-list"><a href="#home" class="nav-link">Home</a></li>
         <li class="nav-list"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-list" id="nav-list-dropdown" data-projects-drop-down-button>
+        <li class="nav-list" id="navListDropdown" data-projects-drop-down-button>
           <a href="/home#projects" class="nav-link" data-projects-nav-link>Projects</a>
-          <button id="nav-link-btn">&#x25BC;</button>
+          <button id="navLinkBtn">&#x25BC;</button>
         </li>
         <%- include('./_navDropdown.ejs') %>
         <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
@@ -39,9 +39,9 @@
   <main class="homepage" id="home">
     <article class="hero-text-container">
       <h1 class="hero-secondary-header">Hello, My Name is</h1>
-      <section class="ml-100 mb-20">
+      <section class="name-container">
         <h1 class="hero-header secondary-color">Prabdeep</h1>
-        <h1 class="hero-header ml-100" id="remove-margin">Dhaliwal</h1>
+        <h1 class="hero-header ml-100" id="removeHeroHeaderMargin">Dhaliwal</h1>
       </section>
       <div>
         <h4 class="hero-secondary-header">&#8211; Full Stack Developer / Unity Game Developer</h4>
@@ -50,13 +50,10 @@
         <a href="#contact" class="anchor-btn">Contact Me</a>
       </div>
     </article>
-    <div class="hero-img-container">
-      <div class="hero-img"></div>
-    </div>
   </main>
 
   <section class="vp-100 about" id="about">
-    <img src="../imgs/Prab-Img.png" alt="Prabdeep Dhaliwal" height="350">
+    <img class="about-img" src="../imgs/Prab-Img.png" alt="Prabdeep Dhaliwal" height="350">
     <article class="about-section">
       <h3 class="secondary-header">Discover</h3>
       <h3 class="header">&#8211; About Me</h3>

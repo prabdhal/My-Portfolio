@@ -275,11 +275,6 @@ button {
     top: 0%;
   }
 
-  #nav-list-dropdown {
-    margin-left: 110px;
-    cursor: pointer;
-  }
-
   .open::-webkit-scrollbar {
     display: none;
   }
@@ -311,7 +306,13 @@ button {
     padding: 60px 0;
   }
 
-  #nav-link-btn {
+  #navListDropdown {
+    cursor: pointer;
+    margin-left: 110px;
+  }
+
+  #navLinkBtn {
+    display: inline-block;
     background: transparent;
     border: 0;
     outline: 0;
@@ -364,6 +365,10 @@ button {
   .about-img {
     justify-content: center;
     margin: auto;
+  }
+
+  .name-container {
+    margin: 0;
   }
 }
 

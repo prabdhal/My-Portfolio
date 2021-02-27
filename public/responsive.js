@@ -1,5 +1,7 @@
-const divMargin = document.querySelector('div.mb-20');
-const heroHeaderMargin = document.getElementById('remove-margin');
+//const divMargin = document.querySelector('div.mb-20');
+const removeHeroHeaderMargin = document.getElementById(
+  'removeHeroHeaderMargin'
+);
 const navBar = document.querySelector('header');
 const logoText = document.querySelector('.logo-text');
 const navLinks = document.querySelector('.nav-links');
@@ -119,13 +121,11 @@ navLink.forEach((link) => {
 // removes margin-left styling from hero div and text
 // for better responsive fit at max width 1100px
 function mediaQuery(x) {
-  if (divMargin == null) return;
   if (x.matches) {
-    divMargin.classList.remove('ml-100');
-    heroHeaderMargin.classList.remove('ml-100');
+    if (removeHeroHeaderMargin == null) return;
+    removeHeroHeaderMargin.classList.remove('ml-100');
   } else {
-    divMargin.classList.add('ml-100');
-    heroHeaderMargin.classList.add('ml-100');
+    removeHeroHeaderMargin.classList.add('ml-100');
   }
 }
 
