@@ -482,8 +482,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: Fade 500ms ease-in-out forwards;
-          animation: Fade 500ms ease-in-out forwards;
+  -webkit-animation: Fade 200ms ease-in-out forwards;
+          animation: Fade 200ms ease-in-out forwards;
 }
 
 @-webkit-keyframes Fade {
@@ -818,8 +818,8 @@ li,
     text-align: center;
     background-color: var(--secondaryColor);
     z-index: 99;
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
   .dropdown-content,
   .dropdown-content-alt {
