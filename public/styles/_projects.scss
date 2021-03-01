@@ -11,7 +11,7 @@
   display: grid;
   padding: var(--gutter) 0;
   grid-gap: var(--gutter) 0;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   align-content: start;
   justify-content: center;
   margin: auto;
@@ -21,7 +21,7 @@
   width: 100%;
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(6, 400px);
+  grid-template-columns: repeat(7, 400px);
   grid-template-rows: 810px;
   list-style: none;
   padding: 0 20px;
@@ -74,6 +74,6 @@
 .project-skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 30px);
+  grid-template-rows: repeat(3, 30px);
   color: white;
 }
