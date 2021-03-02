@@ -22,7 +22,7 @@
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
   grid-template-columns: repeat(7, 400px);
-  grid-template-rows: 810px;
+  grid-template-rows: 780px;
   list-style: none;
   padding: 0 20px;
 
@@ -74,6 +74,7 @@
 .project-skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 30px);
+  grid-template-rows: repeat(2, 25px);
+  padding: 5px;
   color: white;
 }

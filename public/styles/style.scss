@@ -327,7 +327,7 @@ button {
   }
 
   .hs {
-    grid-template-columns: repeat(6, minmax(300px, 400px));
+    grid-template-columns: repeat(7, 400px);
     grid-template-rows: 300px;
     padding: 0 10px;
 
@@ -339,9 +339,6 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-  .projects-container {
-    width: 60%;
-  }
   .project-item {
     flex-direction: column;
     align-content: center;
@@ -391,6 +388,6 @@ button {
   }
 
   .proj-hs {
-    grid-template-rows: 650px;
+    grid-template-rows: 600px;
   }
 }
